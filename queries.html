@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SQL Queries</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+        text-align: center;
+        color: #333;
+    }
+
+    button {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        background-color: #4CAF50;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    button:hover {
+        background-color: #45a049;
+    }
+
+    .answer {
+        display: none;
+        margin-top: 10px;
+        padding: 10px;
+        background-color: #f9f9f9;
+        border-left: 4px solid #4CAF50;
+    }
+
+    .answer p {
+        margin: 0;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h1>SQL Queries</h1>
+
+    <!-- Query buttons -->
+    <button onclick="toggleAnswer('q1')">1. Write a query to display employee information from employee table?</button>
+    <div id="q1" class="answer">
+        <p>A) SELECT * FROM EMP;</p>
+    </div>
+
+    <button onclick="toggleAnswer('q2')">2. Query to display department information from department table?</button>
+    <div id="q2" class="answer">
+        <p>A) SELECT * FROM DEPT;</p>
+    </div>
+
+    <button onclick="toggleAnswer('q3')">3. Query to display tables present in database?</button>
+    <div id="q3" class="answer">
+        <p>A) SELECT * FROM TAB;</p>
+    </div>
+
+    <button onclick="toggleAnswer('q4')">4. Query to display employee name and designation for all employee from emp table?</button>
+    <div id="q4" class="answer">
+        <p>A) SELECT ENAME , JOB FROM EMP;</p>
+    </div>
+
+    <button onclick="toggleAnswer('q5')">5. Query to display Ename , Date of joining , salary , deptNo for all the employee?</button>
+    <div id="q5" class="answer">
+        <p>A) SELECT ENAME, HAIREDATE, SAL, DEPTNO FROM EMP;</p>
+    </div>
+
+    <button onclick="toggleAnswer('q6')">6. Query to display EmpNo & EmpName along with their ManagerNO and Commission for the employees?</button>
+    <div id="q6" class="answer">
+        <p>A) SELECT EMPNO, ENAME, MGR, COMM FROM EMP;</p>
+    </div>
+
+    <button onclick="toggleAnswer('q7')">7. Query to display DeptName & Location from Dept table?</button>
+    <div id="q7" class="answer">
+        <p>A) SELECT DNAME, LOC FROM DEPT;</p>
+    </div>
+
+    <!-- ALIASING -->
+    <button onclick="toggleAnswer('q8')">Alias: Rename column name</button>
+    <div id="q8" class="answer">
+        <p>A) SELECT ENAME AS "EMPNAME", SAL AS "SALARY" FROM EMP;</p>
+        <p>B) SELECT ENAME AS "EMPNAME", HIREDATE AS "DOJ" FROM EMP;</p>
+    </div>
+
+    <button onclick="toggleAnswer('q9')">Alias: Rename table name</button>
+    <div id="q9" class="answer">
+        <p>A) SELECT * FROM EMP "EMPLOYEE";</p>
+    </div>
+
+    <!-- Creating Duplicate Table -->
+    <button onclick="toggleAnswer('q10')">Creating Duplicate Table using old table</button>
+    <div id="q10" class="answer">
+        <p>A) CREATE TABLE HYD AS SELECT * FROM EMP;</p>
+    </div>
+
+    <!-- Where Clause -->
+    <button onclick="toggleAnswer('q11')">Where Clause: Query where Ename is Smith</button>
+    <div id="q11" class="answer">
+        <p>A) SELECT * FROM EMP WHERE ENAME = 'SMITH';</p>
+    </div>
+
+    <!-- Add more buttons and answers as needed -->
+
+</div>
+
+<script>
+    // JavaScript function to toggle the visibility of answers
+    function toggleAnswer(id) {
+        var answer = document.getElementById(id);
+        if (answer.style.display === "none") {
+            answer.style.display = "block";
+        } else {
+            answer.style.display = "none";
+        }
+    }
+</script>
+
+</body>
+</html>

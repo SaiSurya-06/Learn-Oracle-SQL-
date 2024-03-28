@@ -1,0 +1,116 @@
+/* Basic styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjvzHwER7VwomMQraNgjw6wGl9cIErjBDRO1jFWcKFQJVJ7kBEwMy1kyDm6_GjwOUN-GkWL2slEHsNTuKMnFg_mAkbxDA0vo0TbKrG23mzoKYV_nP9fNfC8ejOfYsC_kKYku4ycyW0L3GEkcGZEzfP08t1o9b_nz3gENokw3T4VHSvsa7kOvGuBoVpQyHM/s5376/bg.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: left;
+  }
+  
+  h1 {
+    text-align: center;
+    padding: 20px;
+    margin-top: 0;
+    border-radius: 10px 10px 0 0;
+    background-color: rgba(33, 150, 243, 0.8);
+    color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .content {
+    padding: 20px;
+  }
+  
+  .content p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .toggleButton {
+    cursor: pointer;
+    color: #4CAF50;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+    margin-left: 10px;
+  }
+  
+  .toggleButton:hover {
+    background-color: #f0f0f0;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  li {
+    margin-bottom: 10px;
+  }
+  
+  .sideHeading {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .sideText {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .rdbms-module {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    position: relative; /* Added positioning */
+  }
+  
+  .rdbms-image {
+    float: right;
+    width: 200px; /* Adjust the width as needed */
+    margin-left: 20px; /* Add some space between the image and the text */
+  }
+  
+  .example-dql {
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .example-dql .toggleButton {
+    color: #2196F3; /* Change button color */
+  }
+  
+  .example-dql p {
+    font-size: 16px !important; /* Ensure the font size is applied */
+    margin: 10px 0;
+  }
+  
+  @media only screen and (max-width: 600px) {
+    .container {
+      margin: 20px;
+      padding: 10px;
+    }
+  }
+  
