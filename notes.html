@@ -342,7 +342,7 @@
         <li>
           <span class="toggleButton" onclick="toggleVisibility(23)">1. CREATE</span>
           <p id="demo23" style="display: none; padding-left: 20px;">
-            This statement is used to <b><u>CREATE</u></b> a table in database and it is a perment change.<br>
+            - This statement is used to <b><u>CREATE</u></b> a table in database and it is a perment change.<br>
             <u>SYNTAX:</u><br>
             CREATE TABLE TABLE_NAME<br>
             (COLUMN_NAME1 DATATYPE(SIZE) CONSTRAINT,<br>
@@ -353,137 +353,114 @@
         <li>
           <span class="toggleButton" onclick="toggleVisibility(24)">2. RENAME TABLE NAME</span>
           <p id="demo24" style="display: none; padding-left: 20px;">
-            It is used to retrieve data from the database, by selecting all the columns.<br>
+            - This statement is used to <u><b>Rename</b></u> old table name with new table name.<br>
             <u>SYNTAX:</u><br>
-            SELECT * FROM TABLE_NAME
+            RENAME OLD_TABLE_NAME TO NEW_TABLE_NAME;<br>
           </p>
         </li>
         <li>
           <span class="toggleButton" onclick="toggleVisibility(25)">3. DROP TABLE</span>
           <p id="demo25" style="display: none; padding-left: 20px;">
-            It is a keyword and it is used to specify the table name.<br>
+            - This statement is used to <u><b>Delete</b></u> table from the database.<br>
+            (OR)<br>
+            - This statement is used to <u><b>Delete</b></u> structur of the table.<br>
             <u>SYNTAX:</u><br>
-            SELECT * FROM TABLE_NAME
+            DROP TABLE TABLE_NAME;
           </p>
         </li>
         <li>
           <span class="toggleButton" onclick="toggleVisibility(26)">4. TRUNCATE TABLE</span>
           <p id="demo26" style="display: none; padding-left: 20px;">
-            Where clause is used to give condition to the query and it will execute the output based on the condition.<br>
+            - This statement it is used to entire records present in a table and sstructure of the table remains the same.<br>
             <u>SYNTAX:</u><br>
-            SELECT * FROM TABLE_NAME<br>
-            WHERE CONDITION;
+            TRUNCATE TABLE TABLE_NAME;
           </p>
         </li>
         <li>
           <span class="toggleButton" onclick="toggleVisibility(27)">5. FLACHBACK TABLE</span>
           <p id="demo27" style="display: none; padding-left: 20px;">
-            Order by clause is used to rearrange the outputs either in ascending or in descending order.<br>
+            - This statement it is used to restore deleted table from the recycle bin.<br>
             <u>SYNTAX:</u><br>
-            SELECT * FROM TABLE_NAME<br>
-            WHERE CONDITION<br>
-            ORDER BY COLUMN_NAME ASC/DESC;
+            FLASHBACK TABLE TABLE_NAME TO BEFORE DROP;<br>
           </p>       
           </li>
           <li>
             <span class="toggleButton" onclick="toggleVisibility(28)">6. PURGE</span>
             <p id="demo28" style="display: none; padding-left: 20px;">
-              Group by clause it is used to divide the table into multiple groups and it will execute each output for each group.<br>
-              *(Whatever column we are using inside the select statement along with multi-row function the same column we have to use inside the Group by clause)<br>
+              - This statement is used to delete deleted table from recycle bin.<br>
               <u>SYNTAX:</u><br>
-              SELECT COLUMN_NAME1, COLUMN_NAME2, MULTI ROW FUNCTION FROM TABLE_NAME<br>
-              WHERE CONDITION<br>
-              GROUP BY(COLUMN_NAME1, COLUMN_NAME2)<br>
-              ORDER BY COLUMN_NAME ASC/DESC;
+              PURGE TABLE TABLE_NAME;
             </p>
           </li>
           <li>
             <span class="toggleButton" onclick="toggleVisibility(29)">7. ALTER</span>
             <p id="demo29" style="display: none; padding-left: 20px;">
-              Having clause it is used to create groups for group by condition and if there is a condition for multi-row functions we have to go for having clause.<br>
-              *(For using Having clause Group by condition is mandatory)<br>
-              <u>SYNTAX:</u><br>
-              SELECT COLUMN_NAME1, COLUMN_NAME2, MULTI ROW FUNCTION FROM TABLE_NAME<br>
-              WHERE CONDITION<br>
-              GROUP BY(COLUMN_NAME1, COLUMN_NAME2)<br>
-              HAVING CLAUSE<br>
-              ORDER BY COLUMN_NAME ASC/DESC;
+              - Alter statement it is used to modify structure of the table.<br>
             </p>
           </li>
           <li>
             <span class="toggleButton" onclick="toggleVisibility(30)">7.1. ADD SINGLE COLUMN TO AN EXISTING TABLE</span>
             <p id="demo30" style="display: none; padding-left: 20px;">
-              It is used to retrieve data from the database, by selecting all the records.<br>
               <u>SYNTAX:</u><br>
-              SELECT * FROM TABLE_NAME;
+              ALTER TABLE TABLE_NAME<br>
+              ADD (COLUMN_NAME DATATYPE(SIZE) CONSTRAINT);<br>
             </p>
           </li>
           <li>
             <span class="toggleButton" onclick="toggleVisibility(31)">7.2. ADD MULTIPLE COLUMNS TO AN EXISTING TABLE</span>
             <p id="demo31" style="display: none; padding-left: 20px;">
-              It is used to retrieve data from the database, by selecting all the records.<br>
               <u>SYNTAX:</u><br>
-              SELECT * FROM TABLE_NAME;
+              ALTER TABLE TABLE_NAME<br>
+              ADD (COLUMN_NAME1 DATATYPE(SIZE) CONSTRAINT<br>
+              COLUMN_NAME2 DATATYPE(SIZE) CONSTRAINT);<br>
             </p>
           </li>
           <li>
             <span class="toggleButton" onclick="toggleVisibility(32)">7.3. DROP SINGLE COLUMN</span>
             <p id="demo32" style="display: none; padding-left: 20px;">
-              It is used to retrieve data from the database, by selecting all the columns.<br>
               <u>SYNTAX:</u><br>
-              SELECT * FROM TABLE_NAME
+              ALTER TABLE TABLE_NAME<br>
+              DROP COLUMN COLUMN_NAME;<br>
             </p>
           </li>
           <li>
             <span class="toggleButton" onclick="toggleVisibility(33)">7.4. DROP MULTIPLE COLUMNS FROM TABLE</span>
             <p id="demo33" style="display: none; padding-left: 20px;">
-              It is a keyword and it is used to specify the table name.<br>
               <u>SYNTAX:</u><br>
-              SELECT * FROM TABLE_NAME
+              ALTER TABLE TABLE_NAME<br>
+              DROP (COLUMN_NAME1 COLUMN_NAME2);<br>
             </p>
           </li>
           <li>
             <span class="toggleButton" onclick="toggleVisibility(34)">7.5. MODIFY DATATYPE FOR A COLUMN</span>
             <p id="demo34" style="display: none; padding-left: 20px;">
-              Where clause is used to give condition to the query and it will execute the output based on the condition.<br>
               <u>SYNTAX:</u><br>
-              SELECT * FROM TABLE_NAME<br>
-              WHERE CONDITION;
+              ALTER TABLE TABLE_NAME<br>
+              MODIFY(COLUMN_NAME NEW_DATA_TYPE(SIZE));<br>
             </p>
           </li>
           <li>
             <span class="toggleButton" onclick="toggleVisibility(35)">7.6. MODIFY CONSTRAINTS FOR A COLUMN</span>
             <p id="demo35" style="display: none; padding-left: 20px;">
-              Order by clause is used to rearrange the outputs either in ascending or in descending order.<br>
               <u>SYNTAX:</u><br>
-              SELECT * FROM TABLE_NAME<br>
-              WHERE CONDITION<br>
-              ORDER BY COLUMN_NAME ASC/DESC;
+              ALTER TABLE TABLE_NAME<br>
+              MODIFY(COLUMN_NAME DATA_TYPE(SIZE) NEW_CONSTRAINT);<br>
             </p>
           </li>
           <li>
             <span class="toggleButton" onclick="toggleVisibility(36)">7.7. RENAME COLUMN NAME</span>
             <p id="demo36" style="display: none; padding-left: 20px;">
-              Group by clause it is used to divide the table into multiple groups and it will execute each output for each group.<br>
-              *(Whatever column we are using inside the select statement along with multi-row function the same column we have to use inside the Group by clause)<br>
               <u>SYNTAX:</u><br>
-              SELECT COLUMN_NAME1, COLUMN_NAME2, MULTI ROW FUNCTION FROM TABLE_NAME<br>
-              WHERE CONDITION<br>
-              GROUP BY(COLUMN_NAME1, COLUMN_NAME2)<br>
-              ORDER BY COLUMN_NAME ASC/DESC;
+              ALTER TABLE TABLE_NAME<br>
+              RENAME OLD_COLUMN_NAME TO NEW_COLUMN_NAME;<br>
             </p>
           </li>
           <li>
             <span class="toggleButton" onclick="toggleVisibility(37)">7.8. DROP PRIMARY KEY</span>
             <p id="demo37" style="display: none; padding-left: 20px;">
-              Having clause it is used to create groups for the group by condition and if there is a condition for multi-row functions we have to go for having clause.<br>
-              *(For using Having clause Group by condition is mandatory)<br>
               <u>SYNTAX:</u><br>
-              SELECT COLUMN_NAME1, COLUMN_NAME2, MULTI ROW FUNCTION FROM TABLE_NAME<br>
-              WHERE CONDITION<br>
-              GROUP BY(COLUMN_NAME1, COLUMN_NAME2)<br>
-              HAVING CLAUSE<br>
-              ORDER BY COLUMN_NAME ASC/DESC;
+              ALTER TABLE TABLE_NAME<br>
+              DROP PRIMARY KEY;<br>
             </p>
           </li>
         </ul>
@@ -500,40 +477,33 @@
           <li>
             <span class="toggleButton" onclick="toggleVisibility(38)">1. INSERT DATA</span>
             <p id="demo38" style="display: none; padding-left: 20px;">
-              Having clause it is used to create groups for the group by condition and if there is a condition for multi-row functions we have to go for having clause.<br>
-              *(For using Having clause Group by condition is mandatory)<br>
+              - It is used to store data in table as per the requirement.<br>
               <u>SYNTAX:</u><br>
-              SELECT COLUMN_NAME1, COLUMN_NAME2, MULTI ROW FUNCTION FROM TABLE_NAME<br>
-              WHERE CONDITION<br>
-              GROUP BY(COLUMN_NAME1, COLUMN_NAME2)<br>
-              HAVING CLAUSE<br>
-              ORDER BY COLUMN_NAME ASC/DESC;
+              1. INSERT INTO TABLE_NAME VALUES('V1', 'V2', 'V3');<br>
+              2. INSERT INTO TABLE_NAME VALUES(&COLUMN_NAME1, &COLUMN_NAME2, &COLUMN_NAME30;)<br>
+              3. INSERT INTO TABLE_NAME (COLUMN_NAME1, COLUMN_NAME2)<br>
+              &nbsp; &nbsp; &nbsp; &nbsp; VALUES(&V1, &V2);<br>
+              <b><u>Inserting VALUES IN MULTIPLE TABLES USING ONE SYNATAX</u></b>:-<br>
+              INSERT ALL INTO TABLE_NAME1(COLUMN_NAME1, COLUMN_NAME2) VALUES(&V1, &V2);<br>
+              &nbsp; &nbsp; &nbsp; &nbsp; INTO TABLE_NAME2(COLUMN_NAME1, COLUMN_NAME2) VALUES(&V1, &V2)<br>
+              &nbsp; &nbsp; &nbsp; &nbsp;(SELECT * FROM DUAL);
             </p>
           </li>
           <li>
             <span class="toggleButton" onclick="toggleVisibility(39)">2. UPDATE DATA</span>
             <p id="demo39" style="display: none; padding-left: 20px;">
-              Having clause it is used to create groups for the group by condition and if there is a condition for multi-row functions we have to go for having clause.<br>
-              *(For using Having clause Group by condition is mandatory)<br>
+              - This statement is used to update old data with new data.<br>
               <u>SYNTAX:</u><br>
-              SELECT COLUMN_NAME1, COLUMN_NAME2, MULTI ROW FUNCTION FROM TABLE_NAME<br>
-              WHERE CONDITION<br>
-              GROUP BY(COLUMN_NAME1, COLUMN_NAME2)<br>
-              HAVING CLAUSE<br>
-              ORDER BY COLUMN_NAME ASC/DESC;
+              UPDATE TABLE_NAME SET COLUMN_NAME = NEW VALUE;<br>
             </p>
           </li>
           <li>
             <span class="toggleButton" onclick="toggleVisibility(40)">3. DELETE DATA</span>
             <p id="demo40" style="display: none; padding-left: 20px;">
-              Having clause it is used to create groups for the group by condition and if there is a condition for multi-row functions we have to go for having clause.<br>
-              *(For using Having clause Group by condition is mandatory)<br>
+              - This statement is used to delete unwanted data from a table.<br>
               <u>SYNTAX:</u><br>
-              SELECT COLUMN_NAME1, COLUMN_NAME2, MULTI ROW FUNCTION FROM TABLE_NAME<br>
-              WHERE CONDITION<br>
-              GROUP BY(COLUMN_NAME1, COLUMN_NAME2)<br>
-              HAVING CLAUSE<br>
-              ORDER BY COLUMN_NAME ASC/DESC;
+              1. DELETE TABLE_NAME;<br>
+              2. DELETE FROM TABLE WHERE CONDITION;<br>
             </p>
           </li>
         </ul>
@@ -548,40 +518,27 @@
           <li>
             <span class="toggleButton" onclick="toggleVisibility(41)">1. COMMIT</span>
             <p id="demo41" style="display: none; padding-left: 20px;">
-              Having clause it is used to create groups for the group by condition and if there is a condition for multi-row functions we have to go for having clause.<br>
-              *(For using Having clause Group by condition is mandatory)<br>
+              - it is used to save DML statements permanently.<br>
               <u>SYNTAX:</u><br>
-              SELECT COLUMN_NAME1, COLUMN_NAME2, MULTI ROW FUNCTION FROM TABLE_NAME<br>
-              WHERE CONDITION<br>
-              GROUP BY(COLUMN_NAME1, COLUMN_NAME2)<br>
-              HAVING CLAUSE<br>
-              ORDER BY COLUMN_NAME ASC/DESC;
+              COMMIT;<br>
             </p>
           </li>
           <li>
             <span class="toggleButton" onclick="toggleVisibility(42)">2. ROLLBACK</span>
             <p id="demo42" style="display: none; padding-left: 20px;">
-              Having clause it is used to create groups for the group by condition and if there is a condition for multi-row functions we have to go for having clause.<br>
-              *(For using Having clause Group by condition is mandatory)<br>
+              - It is used to restore DML changes.<br>
               <u>SYNTAX:</u><br>
-              SELECT COLUMN_NAME1, COLUMN_NAME2, MULTI ROW FUNCTION FROM TABLE_NAME<br>
-              WHERE CONDITION<br>
-              GROUP BY(COLUMN_NAME1, COLUMN_NAME2)<br>
-              HAVING CLAUSE<br>
-              ORDER BY COLUMN_NAME ASC/DESC;
+              ROLLBACK;<br>
             </p>
           </li>
           <li>
             <span class="toggleButton" onclick="toggleVisibility(43)">3. SAVE POINT</span>
             <p id="demo43" style="display: none; padding-left: 20px;">
-              Having clause it is used to create groups for the group by condition and if there is a condition for multi-row functions we have to go for having clause.<br>
-              *(For using Having clause Group by condition is mandatory)<br>
+              - It is used to mark the location at DML transcation and after creating savepoint previous DML changes we can't restore.<br>
               <u>SYNTAX:</u><br>
-              SELECT COLUMN_NAME1, COLUMN_NAME2, MULTI ROW FUNCTION FROM TABLE_NAME<br>
-              WHERE CONDITION<br>
-              GROUP BY(COLUMN_NAME1, COLUMN_NAME2)<br>
-              HAVING CLAUSE<br>
-              ORDER BY COLUMN_NAME ASC/DESC;
+              1. SAVEPOTINT SAVEPOTINT_NAME;<br>
+              2. ROLLBACK TO SAVEPOTINT SAVEPOTINT_NAME;
+
             </p>
           </li>
         </ul>
@@ -598,27 +555,17 @@
           <li>
             <span class="toggleButton" onclick="toggleVisibility(44)">1. GRANT</span>
             <p id="demo44" style="display: none; padding-left: 20px;">
-              Having clause it is used to create groups for the group by condition and if there is a condition for multi-row functions we have to go for having clause.<br>
-              *(For using Having clause Group by condition is mandatory)<br>
+              - It is used to give our database access to another user.<br>
               <u>SYNTAX:</u><br>
-              SELECT COLUMN_NAME1, COLUMN_NAME2, MULTI ROW FUNCTION FROM TABLE_NAME<br>
-              WHERE CONDITION<br>
-              GROUP BY(COLUMN_NAME1, COLUMN_NAME2)<br>
-              HAVING CLAUSE<br>
-              ORDER BY COLUMN_NAME ASC/DESC;
+              GRANT SELECT ON TABLE_NAME TO USERNAME;<br>
             </p>
           </li>
           <li>
             <span class="toggleButton" onclick="toggleVisibility(45)">2. REVOKE</span>
             <p id="demo45" style="display: none; padding-left: 20px;">
-              Having clause it is used to create groups for the group by condition and if there is a condition for multi-row functions we have to go for having clause.<br>
-              *(For using Having clause Group by condition is mandatory)<br>
+              - It is used to take given access back from another user.<br>
               <u>SYNTAX:</u><br>
-              SELECT COLUMN_NAME1, COLUMN_NAME2, MULTI ROW FUNCTION FROM TABLE_NAME<br>
-              WHERE CONDITION<br>
-              GROUP BY(COLUMN_NAME1, COLUMN_NAME2)<br>
-              HAVING CLAUSE<br>
-              ORDER BY COLUMN_NAME ASC/DESC;
+              REVOKE SELECT ON TABLE_NAME FROM USERNAME;
             </p>
           </li>
         </ul>
