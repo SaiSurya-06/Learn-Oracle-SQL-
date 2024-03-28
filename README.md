@@ -3,7 +3,7 @@ Learn Oracle SQL Web Page
 This repository contains the source code for a web page developed by Saisurya, aimed at facilitating the learning of Oracle SQL. The web page provides an interactive platform for users to practice SQL queries specific to Oracle databases.
 
 How to Use
-Accessing the Web Page:
+Accessing the Web Page: https://saisurya-06.github.io/Learn-Oracle-SQL-/
 
 Visit the following link: Learn Oracle SQL Web Page
 Features:
