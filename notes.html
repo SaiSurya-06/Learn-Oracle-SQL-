@@ -565,7 +565,7 @@
             <p id="demo45" style="display: none; padding-left: 20px;">
               - It is used to take given access back from another user.<br>
               <u>SYNTAX:</u><br>
-              REVOKE SELECT ON TABLE_NAME FROM USERNAME;
+              REVOKE SELECT ON TABLE_NAME FROM USERNAME;<br>
             </p>
           </li>
         </ul>
@@ -578,51 +578,137 @@
         <p>- Operators are some special symbols and all are used to perform some operations on operand.</p>
         <ul>
             <li>
-                <span class="toggleButton" onclick="toggleVisibility(46)">1. ARITHMETIC OPERATOR ( +, -, *, /)</span>
+                <span class="toggleButton" onclick="toggleVisibility(46)">1. ARITHMETIC OPERATORS</span>
                 <p id="demo46" style="display: none; padding-left: 20px;">
-                    It is used to retrieve data from the database, by selecting all the records.<br>
-                    <u>SYNTAX:</u><br>
-                    SELECT * FROM TABLE_NAME;
+                  - Arithmetic operators consists of +, -, *, /.<br>
+                  - Arithmetic operator are used to perform mathmatical operation on operands and expressions.<br>
+                  - All arthmatic operators we have to use only inside the select statement and we can use arthmatic operators in side where condition but alon with relational operators.<br>                  
+                    <u>EXAMPLE:</u><br>
+                    SELECT EMP.*, SAL*12, (SAL*12)/365 FROM EMP ORDER BY SAL DESC;<br>
                 </p>
             </li>
             <li>
-                <span class="toggleButton" onclick="toggleVisibility(47)">2. RELATIONAL OPERATOR (<, >, <=, >=, !=, =)</span>
+                <span class="toggleButton" onclick="toggleVisibility(47)">2. RELATIONAL OPERATORS</span>
                 <p id="demo47" style="display: none; padding-left: 20px;">
-                    It is used to retrieve data from the database, by selecting all the records.<br>
-                    <u>SYNTAX:</u><br>
-                    SELECT * FROM TABLE_NAME;
+                  - Relational operatos consists of <, >, <=, >=, !=, =.<br>
+                  - All relational operators have to use only inside the where condition.<br>
+                  - Relational operators are used to give the condition to the query and it will excute the output as per the condition.<br>
+                  - Relational operator can't use inside the select statement.<br>
+                    <u>EXAMPLE:</u><br>
+                    SELECT * FROM EMP <br>
+                    WHERE HIREDATE = '03 - DEC - 1981';<br>
                 </p>
             </li>
             <li>
-                <span class="toggleButton" onclick="toggleVisibility(48)">3. LOGICAL OPERATOR (AND, OR, NOT)</span>
-                <p id="demo48" style="display: none; padding-left: 20px;">
-                    It is used to retrieve data from the database, by selecting all the records.<br>
-                    <u>SYNTAX:</u><br>
-                    SELECT * FROM TABLE_NAME;
-                </p>
-            </li>
-            <li>
-                <span class="toggleButton" onclick="toggleVisibility(49)">4. SPECIAL OPERATOR</span>
+              <span class="toggleButton" onclick="toggleVisibility(48)">3. LOGICAL OPERATORS</span>
+              <p id="demo48" style="display: none; padding-left: 20px;">
+                  - Whenever we are having multiple conditions we have to go for logical operators.<br>
+                  - Logical operators consist of AND, OR, NOT operators.<br>
+                  - All logical operators we have to use only inside the WHERE condition.<br><br>
+                <b><u>AND OPERATOR</u></b></b><br><br>
+                <pstyle="display: none; padding-left: 20px;>
+                  - Whatever we are having multiple condition it <b>all conditions are true</b>, AND operator will print output.<br>
+                  <u>EXAMPLE</u><br>
+                  SELECT * FROM EMP <br>
+                  WHERE<br>
+                  JOB = 'MANAGER' AND DEPTNO= 30; <br><br>
+                </pstyle>                
+                <b><u>OR OPERATOR</u></b></b><br><br>
+                <pstyle="display: none; padding-left: 20px;>
+                  - Whatever we are having multiple condition <b>if any one conditions is true</b>, OR operator will print output.<br>
+                  <b><u>Note</u>:-</b><br>
+                  &nbsp; &nbsp; &nbsp; - Whatever we have multiple condition for Similar column we have to use <b>OR</b> operator.<br>
+                  <u>EXAMPLE</u><br>
+                  SELECT * FROM EMP <br>
+                  WHERE<br>
+                  SAL > 2000 AND(JOB = 'MANAGER OR JOB = 'ANALYST');<br>
+              </pstyle>
+              </p>
+              </li>
+              <li>
+                <span class="toggleButton" onclick="toggleVisibility(49)">4. SPECIAL OPERATORS</span>
                 <p id="demo49" style="display: none; padding-left: 20px;">
-                    It is used to retrieve data from the database, by selecting all the records.<br>
-                    <u>SYNTAX:</u><br>
-                    SELECT * FROM TABLE_NAME;
+                  - Special operator consists of IN, BETWEEN, LIKE, IS, NOT IN, NOT BETWEEN, NOT LIKE, IS NOT.<br><br>
+                  <b><u>IN OPERATOR</u></b></b><br><br>
+                  <pstyle="display: none; padding-left: 20px;>
+                  - Insted of using multiple times OR operator, we can use IN operator.<br>
+                  <u>EXAMPLE</u><br>
+                  SELECT * FROM EMP <br>
+                  WHERE<br>
+                  SAL > 2000 AND DEPTNO IN(20, 30, 40);<br>,<br>
+                </pstyle>
+                <b><u>BETWEEN OPERATOR</u></b></b><br><br>
+                <pstyle="display: none; padding-left: 20px;>
+                  - Whatever we are having values in range we have to use <b>'BETWEEN OPERATOR'</b> .<br>
+                  <u>EXAMPLE</u><br>
+                  SELECT * FROM EMP <br>
+                  WHERE<br>
+                  HIREDATE BETWEEN '01-JAN-1981' AND '31-DEC-1981';<br><br>
+                </pstyle>
+                <b><u>LIKE OPERATOR</u></b></b><br><br>
+                <pstyle="display: none; padding-left: 20px;>
+                  - Like operator used for pattern matching.<br>
+                  - To achive patteren matching, we have to use <b>'SQL Wild Cards'</b>
+                  <b>WILD CARDS:-</b><br>
+                  &nbsp; &nbsp; % -> (It derives 0 to n charcater)<br>
+                  &nbsp; &nbsp; _ -> (It derives single charcater)<br>
+                  <u>EXAMPLE</u><br>
+                  1. Query to display details whose designation contains MAN?<br>
+                  &nbsp; &nbsp;  SELECT * FROM EMP<br>
+                  &nbsp; &nbsp;  WHERE JOB LIKE '%MAN%';<br>
+                  2. Query to display employee information for who is earning 4 digit salary in manager, analyst designation?<br>
+                  &nbsp; &nbsp;  SELECT * FROM EMP<br>
+                  &nbsp; &nbsp;  WHERE SAL LIKE '_ _ _ _' AND JOB IN('MANAGER', 'ANALYST');<br>
                 </p>
-            </li>
-            <li>
-                <span class="toggleButton" onclick="toggleVisibility(50)">5. CONCATENATION OPERATOR (||)</span>
+              </li>
+              <li>
+                <span class="toggleButton" onclick="toggleVisibility(50)">5. CONCATENATION OPERATOR</span>
                 <p id="demo50" style="display: none; padding-left: 20px;">
-                    It is used to retrieve data from the database, by selecting all the records.<br>
-                    <u>SYNTAX:</u><br>
-                    SELECT * FROM TABLE_NAME;
+                  - Joining or merging two or more LITERALS is know is <b>Concatenation</b>.<br>
+                  - To achive concatencation we have to use parallel symbol(||).<br>
+                  - Concatenation operator we have to use only inside the select statement.<br>
+                  <u>EXAMPLE</u><br>
+                  SELECT 'Smith' || 'is' || 'earning' || 800 FROM DUAL;<br>
                 </p>
-            </li>
-            <li>
+              </li>
+              <li>
                 <span class="toggleButton" onclick="toggleVisibility(51)">6. SET OPERATOR</span>
                 <p id="demo51" style="display: none; padding-left: 20px;">
-                    It is used to retrieve data from the database, by selecting all the records.<br>
-                    <u>SYNTAX:</u><br>
-                    SELECT * FROM TABLE_NAME;
+                  - Set operators are used to combine the results of two or more select statements.<br>
+                  - In each and every select statement we have to use same data type columns.<br>\
+                  <b><u>1. UNION SET OPERATOR</u>:-</b><br>
+                  <b><u>BETWEEN OPERATOR</u></b></b><br><br>
+                <pstyle="display: none; padding-left: 20px;>
+                - Union set Operator it is used to combine the results of two or more select statements and it will remove all duplicate values.<br>
+                  <u>SYNTAX</u><br>
+                  SELECT COLUMN_NAME FROM TABLE_NAME<br>
+                  UNION<br>
+                  SELECT COLUMN_NAME FROM TABLE_NAME;<br><br>
+                </pstyle>
+                <b><u>2. UNION ALL OPERATOR</u></b></b><br><br>
+                <pstyle="display: none; padding-left: 20px;>
+                  - It is used to combine the results of two or more select statements but it will not remove duplicate values from all select statements.<br>
+                  <u>SYNTAX</u><br>
+                  SELECT COLUMN_NAME FROM TABLE_NAME<br>
+                  UNION ALL<br>
+                  SELECT COLUMN_NAME FROM TABLE_NAME;<br><br>
+                </pstyle>
+                <b><u>3. INTERSECT OPERATOR</u></b></b><br><br>
+                <pstyle="display: none; padding-left: 20px;>
+                  - It is used to combine the results of two or more select statements and it will remove duplicate values from all select statements but it will display only matched records from all select statements.<br>
+                  <u>SYNTAX</u><br>
+                  SELECT COLUMN_NAME FROM TABLE_NAME<br>
+                  INTRSECT<br>
+                  SELECT COLUMN_NAME FROM TABLE_NAME;<br><br>
+                </pstyle>
+                <b><u>4. MINUS OPERATOR</u></b></b><br><br>
+                <pstyle="display: none; padding-left: 20px;>
+                  - It is used to combine the results of two or more select statements and it will display unmatched records only from <b>first select statement</b>.<br>
+                  <u>SYNTAX</u><br>
+                  SELECT COLUMN_NAME FROM TABLE_NAME<br>
+                  MINUS<br>
+                  SELECT COLUMN_NAME FROM TABLE_NAME;<br><br>
+                </pstyle>
                 </p>
             </li>
         </ul>
@@ -634,139 +720,150 @@
         <div class="sideHeading">FUNCTIONS</div>
         <p>Functions are important features of sql and all functions are used to perform some calculations on data.</p>
         <b>1. <u>SINGLE ROW FUNCTIONS (SCALAR)</u></b><br><br>
-        <pstyle="display: none; padding-left: 20px;>- Single row function it will take multiple inputs from the user and it will excute multiple value outputs.<br>
+      <pstyle="display: none; padding-left: 20px;>- Single row function it will take multiple inputs from the user and it will excute multiple value outputs.<br>
         - Single row function we can use inside select statement and inside the where condition.<br>
         - We can use multiple single row functions inside the one select statement.<br>
-        </p>
+      </pstyle>
         <ul>
             <li>
                 <span class="toggleButton" onclick="toggleVisibility(52)">1. UPPER()</span>
                 <p id="demo52" style="display: none; padding-left: 20px;">
-                    It is used to retrieve data from the database, by selecting all the records.<br>
+                  - This function it is used to convert LOWER case charcater to UPPER case charcater.<br>
                     <u>SYNTAX:</u><br>
-                    SELECT * FROM TABLE_NAME;
+                    SELECT UPPER(COLUMN_NAME) FROM TABLE_NAME;
                 </p>
             </li>
             <li>
                 <span class="toggleButton" onclick="toggleVisibility(53)">2. LOWER()</span>
                 <p id="demo53" style="display: none; padding-left: 20px;">
-                    It is used to retrieve data from the database, by selecting all the columns.<br>
-                    <u>SYNTAX:</u><br>
-                    SELECT * FROM TABLE_NAME
+                  - This function it is used to convert UPPER case charcater to LOWER case charcater.<br>
+                  <u>SYNTAX:</u><br>
+                  SELECT LOWER(COLUMN_NAME) FROM TABLE_NAME;
                 </p>
             </li>
             <li>
                 <span class="toggleButton" onclick="toggleVisibility(54)">3. INITCAP</span>
                 <p id="demo54" style="display: none; padding-left: 20px;">
-                    It is a keyword and it is used to specify the table name.<br>
-                    <u>SYNTAX:</u><br>
-                    SELECT * FROM TABLE_NAME
+                  - This function it is used to convert only first charcater of the string in UPPER case and it will convert remaning all charcater in LOWER case.<br>
+                  <u>SYNTAX:</u><br>
+                  SELECT INITCAP(COLUMN_NAME) FROM TABLE_NAME;
                 </p>
             </li>
             <li>
                 <span class="toggleButton" onclick="toggleVisibility(55)">4. LENGTH</span>
                 <p id="demo55" style="display: none; padding-left: 20px;">
-                    Where clause is used to give condition to the query and it will execute the output based on the condition.<br>
-                    <u>SYNTAX:</u><br>
-                    SELECT * FROM TABLE_NAME<br>
-                    WHERE CONDITION;
+                  - Length function it is used to calculate number of charcaters present in LITERALS.<br>
+                  - Length function we can use inside the select statement and where condiction.<br>
+                  <u>SYNTAX:</u><br>
+                  1. SELECT LENGHT(LITERALS/COLUMN_NAME) FROM TABLE_NAME;<br>
+                  2. SELECT TABLE_NAME.*, LENGTH(COLUMN_NAME) FROM TABLE_NAME;<br>
+                  3. SELECT * FROM TABLE_NAME<br>
+                  &nbsp; &nbsp; WHERE LENGTH(COLUMN_NAME) = VALUE;<br>
                 </p>
             </li>
             <li>
                 <span class="toggleButton" onclick="toggleVisibility(56)">5. CONCAT</span>
                 <p id="demo56" style="display: none; padding-left: 20px;">
-                    Order by clause is used to rearrange the outputs either in ascending or in descending order.<br>
+                   - Concatation function is used to join or merging two or more LITERALS or columns is know as concation function.<br>
+                   - For one concat function we have to pass only <b>'two'</b> arguments.<br>
+                   - If we have more then two arguments we have to go for <b>Nested Concatation</b>.<br>
                     <u>SYNTAX:</u><br>
-                    SELECT * FROM TABLE_NAME<br>
-                    WHERE CONDITION<br>
-                    ORDER BY COLUMN_NAME ASC/DESC;
+                    1. SELECT CONCAT(Arg1,Arg2) FROM TABLE_NAMEL<br>
+                    2. SELECT CONCAT(CONCAT(CONCAT(Arg1, Arg2), Arg3), Arg4) FROM TABLE_NAME;<br>
+                    - We should use (N - 1) formula (where N = no.of arguments).<br>
                 </p>
             </li>
             <li>
                 <span class="toggleButton" onclick="toggleVisibility(57)">6. SUBSTR</span>
                 <p id="demo57" style="display: none; padding-left: 20px;">
-                    Group by clause it is used to divide the table into multiple groups and it will execute each output for each group.<br>
-                    *(Whatever column we are using inside the select statement along with multi-row function the same column we have to use inside the Group by clause)<br>
+                   - SUBSTR it is used to extract string from another string.<br>
+                   - Extracting of substring always works from left-side to right-side.<br>
+                   - SUBSTR we can use inside the select statement and where condiction.<br>
                     <u>SYNTAX:</u><br>
-                    SELECT COLUMN_NAME1, COLUMN_NAME2, MULTI ROW FUNCTION FROM TABLE_NAME<br>
-                    WHERE CONDITION<br>
-                    GROUP BY(COLUMN_NAME1, COLUMN_NAME2)<br>
-                    ORDER BY COLUMN_NAME ASC/DESC;
+                    SELECT SUBSTR(Arg1, Arg2, Arg3) FROM TABLE_NAME;<br>
+                    - Arg1 = COLUMN_NAME/ LITERALS<br>
+                    - Arg2 = Starting position<br>
+                    - aRG3 = Length of substring.<br>
                 </p>
             </li>
             <li>
                 <span class="toggleButton" onclick="toggleVisibility(58)">7. REPLACE</span>
                 <p id="demo58" style="display: none; padding-left: 20px;">
-                    Having clause it is used to create groups for group by condition and if there is a condition for multi-row functions we have to go for having clause.<br>
-                    *(For using Having clause Group by condition is mandatory)<br>
+                   - Replace function it is used to replace old data with new data.<br>
+                   - While using Replace function if we are using old data as one string and that string if its not present in orginal data it will print orginal data as output.<br>
+                   - If we are not considering new data we are considering old data replace function it will remove old data from orginal data.<br>
                     <u>SYNTAX:</u><br>
-                    SELECT COLUMN_NAME1, COLUMN_NAME2, MULTI ROW FUNCTION FROM TABLE_NAME<br>    
-                    WHERE CONDITION<br>    
-                    GROUP BY(COLUMN_NAME1, COLUMN_NAME2)<br>    
-                    HAVING CLAUSE<br>    
-                    ORDER BY COLUMN_NAME ASC/DESC;    
+                    SELECT REPLACE(Arg1, Arg2, Arg3) FROM TABLE_NAME;<br>
+                    - Arg1 = COLUMN_NAME / LITERAL<br>
+                    - Arg2 = Old data <br>
+                    - Arg3 = New data<br>    
                   </p>    
               </li>    
               <li>    
                   <span class="toggleButton" onclick="toggleVisibility(59)">8. INSTR</span>    
-                  <p id="demo59" style="display: none; padding-left: 20px;">    
-                    It is used to retrieve data from the database, by selecting all the records.<br>    
+                  <p id="demo59" style="display: none; padding-left: 20px;">
+                    - It is used to find the position of the charcater.<br>
+                    - INSTR function we can use inside select statement and where condition.<br>
                     <u>SYNTAX:</u><br>    
-                    SELECT * FROM TABLE_NAME;    
+                    SELECT INSTR(Arg1, Arg2, Arg3, Arg4) FROM TABLE_NAME;<br>
+                    - Arg1 = COLUMN_NAME / LITERAL<br>
+                    - Arg2 = charcater to search<br>
+                    - Arg3 = Length of substring / position<br> 
+                    - Arg4 = Occurance<br>
                   </p>    
               </li>    
               <li>    
                   <span class="toggleButton" onclick="toggleVisibility(60)">9. CASE</span>    
-                  <p id="demo60" style="display: none; padding-left: 20px;">    
-                    It is used to retrieve data from the database, by selecting all the records.<br>    
+                  <p id="demo60" style="display: none; padding-left: 20px;">
+                    - This function it is used to update results for multiple condition at a time.<br>    
                     <u>SYNTAX:</u><br>    
-                    SELECT * FROM TABLE_NAME;    
+                    UPDATE TABLE_NAME SET COLUMN_NAME<br>
+                    CASE<br>
+                    WHEN CONDITION1 THEN RESULT1 <br>
+                    WHEN CONDITION2 THEN RESULT2 <br>
+                    ELSE <br>
+                    RESULT_COLUMN_NAME <br>
+                    END<br>  
                   </p>    
               </li>    
                 <li>    
                   <span class="toggleButton" onclick="toggleVisibility(61)">10. LPAD</span>    
-                  <p id="demo61" style="display: none; padding-left: 20px;">    
-                    It is used to retrieve data from the database, by selecting all the columns.<br>    
+                  <p id="demo61" style="display: none; padding-left: 20px;">
+                     - It is used to add padding for data to the left side.<br>    
                     <u>SYNTAX:</u><br>    
-                    SELECT * FROM TABLE_NAME    
+                    SELECT LPAD(STRING, LENGTH, PAD_STRING) FROM DUAL;   
                   </p>    
                 </li>    
                 <li>    
                   <span class="toggleButton" onclick="toggleVisibility(62)">11. RPAD</span>    
-                  <p id="demo62" style="display: none; padding-left: 20px;">    
-                    It is a keyword and it is used to specify the table name.<br>    
-                    <u>SYNTAX:</u><br>    
-                    SELECT * FROM TABLE_NAME    
+                  <p id="demo62" style="display: none; padding-left: 20px;">
+                    - It is used to add padding for data to the RIGHT side.<br>    
+                    <u>EXAMPLE:</u><br>    
+                    SELECT ASCII('A') FROM DUAL;
                   </p>    
                 </li>    
                 <li>    
                   <span class="toggleButton" onclick="toggleVisibility(63)">12. ASCII</span>    
-                  <p id="demo63" style="display: none; padding-left: 20px;">    
-                    Where clause is used to give condition to the query and it will execute the output based on the condition.<br>    
-                    <u>SYNTAX:</u><br>    
-                    SELECT * FROM TABLE_NAME<br>    
-                    WHERE CONDITION;    
+                  <p id="demo63" style="display: none; padding-left: 20px;">
+                     - This function is used to obtain the numeric ASCII value of a character.<br>    
+                     <u>SYNTAX:</u><br>    
+                     SELECT * FROM TABLE_NAME<br>    
+                     WHERE CONDITION;    
                   </p>    
                 </li>    
                 <li>    
                   <span class="toggleButton" onclick="toggleVisibility(64)">13. GREATER</span>    
-                  <p id="demo64" style="display: none; padding-left: 20px;">    
-                    Order by clause is used to rearrange the outputs either in ascending or in descending order.<br>    
-                    <u>SYNTAX:</u><br>    
-                    SELECT * FROM TABLE_NAME<br>    
-                    WHERE CONDITION<br>    
-                    ORDER BY COLUMN_NAME ASC/DESC;    
+                  <p id="demo64" style="display: none; padding-left: 20px;">
+                    - The GREATEST function evaluates the expressions and returns the one with the highest value.<br>    
+                    <u>EXAMPLE:</u><br>
+                    SELECT GREATEST(10, 5, 20, 15) FROM DUAL;<br>
                   </p>    
                 </li>    
                 <li>    
-                  <span class="toggleButton" onclick="toggleVisibility(65)">14. LEAST</span>    
-                  <p id="demo65" style="display: none; padding-left: 20px;">Group by clause it is used to divide the table into multiple groups and it will execute each output for each group.<br>
-                   *(Whatever column we are using inside the select statement along with multi-row function the same column we have to use inside the Group by clause)<br>
+                  <span class="toggleButton" onclick="toggleVisibility(65)">14. LEAST</span>
+                   - The LEAST function evaluates the expressions and returns the one with the LEAST value.<br>
                    <u>SYNTAX:</u><br>
-                   SELECT COLUMN_NAME1, COLUMN_NAME2, MULTI ROW FUNCTION FROM TABLE_NAME<br>    
-                    WHERE CONDITION<br>    
-                    GROUP BY(COLUMN_NAME1, COLUMN_NAME2)<br>    
-                    ORDER BY COLUMN_NAME ASC/DESC;    
+                   SELECT LEAST(10, 5, 20, 15) FROM DUAL;<br>
                   </p>    
                 </li>    
               </ul>
@@ -781,44 +878,42 @@
               <ul>    
                 <li>    
                   <span class="toggleButton" onclick="toggleVisibility(66)">1. MAX()</span>    
-                  <p id="demo66" style="display: none; padding-left: 20px;">It is used to retrieve data from the database, by selecting all the records.<br>    
+                  <p id="demo66" style="display: none; padding-left: 20px;">
+                   - This function it is used to find higest value for specified column.<br>    
                     <u>SYNTAX:</u><br>    
-                    SELECT * FROM TABLE_NAME;    
+                    SELECT MAX(COLUMN_NAME) FROM TABLE_NAME;<br>    
                   </p>    
                 </li>    
                 <li>    
                   <span class="toggleButton" onclick="toggleVisibility(67)">2. MIN()</span>    
                   <p id="demo67" style="display: none; padding-left: 20px;">    
-                    It is used to retrieve data from the database, by selecting all the columns.<br>    
-                    <u>SYNTAX:</u><br>    
-                    SELECT * FROM TABLE_NAME    
+                   - This function it is used to find LOWEST value for specified column.<br>    
+                   <u>SYNTAX:</u><br>    
+                    SELECT MIN(COLUMN_NAME) FROM TABLE_NAME;<br>   
                   </p>    
                 </li>    
                 <li>    
                   <span class="toggleButton" onclick="toggleVisibility(68)">3. AVG()</span>    
                   <p id="demo68" style="display: none; padding-left: 20px;">    
-                    It is a keyword and it is used to specify the table name.<br>    
+                    - This function it is used to find average value for specified column.<br>    
                     <u>SYNTAX:</u><br>    
-                    SELECT * FROM TABLE_NAME    
+                    SELECT AVG(COLUMN_NAME) FROM TABLE_NAME;<br>    
                   </p>    
                 </li>    
                 <li>    
                   <span class="toggleButton" onclick="toggleVisibility(69)">4. SUM()</span>    
-                  <p id="demo69" style="display: none; padding-left: 20px;">    
-                    Where clause is used to give condition to the query and it will execute the output based on the condition.<br>    
+                  <p id="demo69" style="display: none; padding-left: 20px;">
+                    - It is used to find sum of multiple values.<br>    
                     <u>SYNTAX:</u><br>    
-                    SELECT * FROM TABLE_NAME<br>    
-                    WHERE CONDITION;    
+                    SELECT SUM(COLUMN_NAME) FROM TABLE_NAME;<br> 
                   </p>    
                 </li>    
                 <li>    
                   <span class="toggleButton" onclick="toggleVisibility(70)">5. COUNT()</span>    
-                  <p id="demo70" style="display: none; padding-left: 20px;">    
-                    Order by clause is used to rearrange the outputs either in ascending or in descending order.<br>    
-                    <u>SYNTAX:</u><br>    
-                    SELECT * FROM TABLE_NAME<br>    
-                    WHERE CONDITION<br>    
-                    ORDER BY COLUMN_NAME ASC/DESC;    
+                  <p id="demo70" style="display: none; padding-left: 20px;">
+                    - It is used to find number of values present in specified columns and it will ignore null values.<br>    
+                    <u>SYNTAX:</u><br>
+                    SELECT COUNT(COLUMN_NAME) FROM TABLE_NAME;<br>   
                   </p>    
                 </li>    
               </ul>    
@@ -828,72 +923,62 @@
               <ul>    
                 <li>    
                   <span class="toggleButton" onclick="toggleVisibility(71)">1. SYSDATE</span>    
-                  <p id="demo71" style="display: none; padding-left: 20px;">    
-                    It is used to retrieve data from the database, by selecting all the records.<br>    
+                  <p id="demo71" style="display: none; padding-left: 20px;">
+                    - The SYSDATE function is used to retrieve the current system date and time from the database server's operating system. It returns a value of the DATE data type, which includes both the date and time components<br>    
                     <u>SYNTAX:</u><br>    
-                    SELECT * FROM TABLE_NAME;    
+                    SELECT SYSDATE FROM DUAL;<br> 
                   </p>    
                 </li>    
                 <li>    
                   <span class="toggleButton" onclick="toggleVisibility(72)">2. SYSTIMESTAMP</span>    
-                  <p id="demo72" style="display: none; padding-left: 20px;">    
-                    It is used to retrieve data from the database, by selecting all the columns.<br>    
+                  <p id="demo72" style="display: none; padding-left: 20px;">
+                    - The SYSTIMESTAMP function is similar to SYSDATE, but it also includes fractional seconds and time zone information. It returns the current system date and time with timezone from the database server's operating system.<br>    
                     <u>SYNTAX:</u><br>    
-                    SELECT * FROM TABLE_NAME    
+                    SELECT SYSTIMESTAMP FROM DUAL;<br>    
                   </p>    
                 </li>    
                 <li>    
                   <span class="toggleButton" onclick="toggleVisibility(73)">3. TO_CHAR</span>    
-                  <p id="demo73" style="display: none; padding-left: 20px;">    
-                    It is a keyword and it is used to specify the table name.<br>    
+                  <p id="demo73" style="display: none; padding-left: 20px;">
+                    - It is used to change the date formate values.<br>    
                     <u>SYNTAX:</u><br>    
-                    SELECT * FROM TABLE_NAME    
+                    SELECT TO_CHAR(Arg1, Arg2) FROM TABLE_NAME;<br>
+                    - Arg1 = COLUMN_NAME / SYSDATE<br>
+                    - Arg2 = Date Formate Values    
                   </p>    
                 </li>    
                 <li>    
                   <span class="toggleButton" onclick="toggleVisibility(74)">4. TO_DATE</span>    
-                  <p id="demo74" style="display: none; padding-left: 20px;">    
-                    Where clause is used to give condition to the query and it will execute the output based on the condition.<br>    
-                    <u>SYNTAX:</u><br>    
-                    SELECT * FROM TABLE_NAME<br>    
-                    WHERE CONDITION;    
+                  <p id="demo74" style="display: none; padding-left: 20px;"> 
+                    - The TO_DATE function is used to convert a character string representing a date or timestamp into a DATE data type. It's particularly useful when you need to insert or compare date values stored as strings in your database.<br>    
+                    <u>EXAMPLE:</u><br>
+                    SELECT TO_DATE('2024-03-30', 'YYYY-MM-DD') FROM DUAL;<br>
                   </p>    
                 </li>    
                 <li>    
                   <span class="toggleButton" onclick="toggleVisibility(75)">5. LAST_DAY</span>    
-                  <p id="demo75" style="display: none; padding-left: 20px;">    
-                    Order by clause is used to rearrange the outputs either in ascending or in descending order.<br>    
-                    <u>SYNTAX:</u><br>    
-                    SELECT * FROM TABLE_NAME<br>    
-                    WHERE CONDITION<br>    
-                    ORDER BY COLUMN_NAME ASC/DESC;    
+                  <p id="demo75" style="display: none; padding-left: 20px;">
+                    - The LAST_DAY function is used to return the last day of the month for a given date or timestamp value. This function is particularly useful when you need to find the end date of a month.<br>    
+                    <u>EXAMPLE:</u><br>
+                    SELECT LAST_DAY('2024-03-15') FROM DUAL;<br> 
                   </p>    
                 </li>    
                 <li>    
                   <span class="toggleButton" onclick="toggleVisibility(76)">6. MONTHS_BETWEEN</span>    
-                  <p id="demo76" style="display: none; padding-left: 20px;">    
-                    Order by clause is used to rearrange the outputs either in ascending or in descending order.<br>    
-                    <u>SYNTAX:</u><br>    
-                    SELECT * FROM TABLE_NAME<br>    
-                    WHERE CONDITION<br>    
-                    ORDER BY COLUMN_NAME ASC/DESC;    
+                  <p id="demo76" style="display: none; padding-left: 20px;">
+                    - The MONTHS_BETWEEN function calculates the number of months between two date values. It returns a fractional number representing the difference in months between the two dates. If the second date is later than the first date, the result is positive; otherwise, it's negative.<br>    
+                    <u>EXAMPLE:</u><br>
+                    SELECT MONTHS_BETWEEN('2024-03-15', '2024-01-15') FROM DUAL;<br>
+    
                   </p>    
                 </li>    
               </ul>    
               <b>4. <u>NVL</u></b><br><br>
               <pstyle="display: none; padding-left: 20px;>- NVL is used to replace NULL values with a specified default value.<br>
               - It evaluates an expression and, if the expression is NULL, returns the specified default value otherwise, it returns the evaluated expression.<br>
-              - NVL is particularly useful when dealing with NULL values in queries or calculations, allowing you to handle such cases gracefully.</pstyle>
-              <ul>    
-                <li>    
-                  <span class="toggleButton" onclick="toggleVisibility(77)">NVL</span>    
-                  <p id="demo77" style="display: none; padding-left: 20px;">    
-                    It is used to retrieve data from the database, by selecting all the records.<br>    
-                    <u>SYNTAX:</u><br>    
-                    SELECT * FROM TABLE_NAME;    
-                  </p>    
-                </li>    
-              </ul>    
+              - NVL is particularly useful when dealing with NULL values in queries or calculations, allowing you to handle such cases gracefully.</pstyle><br><br>
+              <u>SYNTAX:</u><br>
+              SELECT NVL (COLUMN_NAME, VALUE_TO_REPLACE_NULL_VALUE) FROM TABLE_NAME;<br>
             </div> 
     
             <!--SUB QUERY-->  
