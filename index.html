@@ -4,130 +4,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Learn Oracle SQL With Surya</title>
+    <!-- Include Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f0f0f0;
-        }
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        h1, h2, p {
-            margin: 0;
-            padding: 0;
-        }
-        h1 {
-            color: #333;
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        h2 {
-            color: #555;
-            margin-bottom: 10px;
-        }
-        p {
-            color: #666;
-            margin-bottom: 15px;
-        }
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        li {
-            margin-bottom: 10px;
-        }
-        .btn {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #007bff;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 5px;
-            margin-right: 10px;
-        }
-        .btn:last-child {
-            margin-right: 0;
-        }
-        .btn:hover {
-            background-color: #0056b3;
-        }
-        .reasons {
-            margin-top: 30px;
-        }
-        .reason {
-            border-left: 3px solid #007bff;
-            padding-left: 10px;
-            margin-bottom: 20px;
-        }
-        .testimonial {
-            margin-top: 30px;
-            border-top: 1px solid #ccc;
-            padding-top: 20px;
-        }
-        .testimonial p {
-            font-style: italic;
-        }
-        .testimonial-author {
-            text-align: right;
-            margin-top: 10px;
-        }
+        /* Additional custom CSS can be added here if needed */
     </style>
 </head>
-<body>
-    <div class="container">
-        <h1>Welcome to Learn Oracle SQL With Surya</h1>
-        <p>Empowering Students to Master Oracle SQL</p>
-        <p>Welcome to Learn Oracle SQL With Surya, your ultimate destination for mastering Oracle SQL. Whether you're a novice eager to dive into the world of databases or a seasoned professional looking to enhance your skills, you've come to the right place.</p>
-        <p>At Learn Oracle SQL With Surya, I am dedicated to providing comprehensive resources and expert guidance to students who are passionate about learning Oracle SQL. Our carefully crafted courses and tutorials cater to learners of all levels, from beginners taking their first steps to advanced practitioners seeking to refine their expertise.</p>
+<body class="bg-gray-100 font-sans">
+    <div class="container mx-auto p-8 max-w-3xl bg-white rounded-lg shadow-lg">
+        <h1 class="text-3xl text-center text-gray-900 mb-6">Welcome to Learn Oracle SQL With Surya</h1>
+        <p class="text-lg text-center text-gray-700 mb-8">Empowering Students to Master Oracle SQL</p>
+        <p class="text-lg text-gray-700 mb-8">Welcome to Learn Oracle SQL With Surya, your ultimate destination for mastering Oracle SQL. Whether you're a novice eager to dive into the world of databases or a seasoned professional looking to enhance your skills, you've come to the right place.</p>
         
-        <h2>Why Learn Oracle SQL?</h2>
-        <div class="reasons">
-            <div class="reason">
+        <h2 class="text-2xl text-gray-900 mb-4">Why Learn Oracle SQL?</h2>
+        <div class="reasons mb-8">
+            <div class="reason border-l-4 border-blue-500 pl-4 mb-4">
                 <p><strong>1. Career Opportunities:</strong> In today's data-driven world, proficiency in Oracle SQL opens the door to a wide range of lucrative career opportunities. From database administrators and data analysts to software engineers and business intelligence developers, Oracle SQL skills are highly sought after across various industries.</p>
             </div>
-            <div class="reason">
+            <div class="reason border-l-4 border-blue-500 pl-4 mb-4">
                 <p><strong>2. In-Demand Skills:</strong> Oracle SQL is a foundational skill in the field of database management and data analysis. By mastering Oracle SQL, you'll acquire essential skills that are in high demand by employers worldwide. Whether you're entering the job market or seeking career advancement, Oracle SQL proficiency will set you apart from the competition.</p>
             </div>
-            <div class="reason">
+            <div class="reason border-l-4 border-blue-500 pl-4 mb-4">
                 <p><strong>3. Importance in Database Management:</strong> Oracle SQL is the language of choice for managing Oracle databases, which are widely used in enterprise environments and mission-critical applications. By learning Oracle SQL, you'll gain the expertise needed to design, manipulate, and maintain complex databases efficiently and effectively.</p>
             </div>
-            <div class="reason">
+            <div class="reason border-l-4 border-blue-500 pl-4 mb-4">
                 <p><strong>4. Empowerment in Data Analysis:</strong> Oracle SQL enables you to extract valuable insights from large datasets, making it an indispensable tool for data analysis and decision-making. Whether you're analyzing sales trends, forecasting market demand, or identifying patterns in customer behavior, Oracle SQL empowers you to unlock the full potential of your data.</p>
             </div>
-            <div class="reason">
+            <div class="reason border-l-4 border-blue-500 pl-4 mb-4">
                 <p><strong>5. Flexibility and Scalability:</strong> Oracle SQL is a versatile language that can be used to perform a wide range of tasks, from simple data retrieval to complex database operations. Whether you're working with small-scale databases or enterprise-level systems, Oracle SQL provides the flexibility and scalability to handle diverse data management challenges.</p>
             </div>
-            <div class="reason">
+            <div class="reason border-l-4 border-blue-500 pl-4 mb-4">
                 <p><strong>6. Industry Recognition:</strong> Oracle is a leading provider of database technology and solutions, with a strong presence in the enterprise market. By learning Oracle SQL, you'll gain industry-recognized credentials and certifications that validate your expertise and enhance your professional credibility.</p>
             </div>
-            <div class="reason">
+            <div class="reason border-l-4 border-blue-500 pl-4 mb-4">
                 <p><strong>7. Continuous Learning and Growth:</strong> As technology evolves and data volumes continue to grow, there is always something new to learn in the world of Oracle SQL. By investing in your Oracle SQL skills, you'll position yourself for continuous learning and growth, ensuring long-term success in your career.</p>
             </div>
         </div>
 
-        <p class="ready">Ready to Get Started?</p>
-        <a href="notes.html" class="btn">Oracle SQL Notes/Syntax</a>
-        <a href="queries.html" class="btn">Queries</a>
+        <p class="text-lg text-center text-gray-700 mb-8">Ready to Get Started?</p>
+        <div class="flex justify-center mb-8">
+            <a href="notes.html" class="btn bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mr-4">Oracle SQL Notes/Syntax</a>
+            <a href="queries.html" class="btn bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Queries</a>
+        </div>
 
         <div class="testimonial">
-            <h2>Testimonials:</h2>
-            <div class="testimonial-item">
-                <p>"Learning Oracle SQL with Surya was a game-changer for my career. Highly recommended!" - Jessica M.</p>
+            <h2 class="text-2xl text-gray-900 mb-4">Testimonials:</h2>
+            <div class="testimonial-item mb-4">
+                <p class="italic">"Learning Oracle SQL with Surya was a game-changer for my career. Highly recommended!" - Jessica M.</p>
             </div>
-            <div class="testimonial-item">
-                <p>"The courses are well-structured, and the instructor's explanations are easy to understand." - David R.</p>
+            <div class="testimonial-item mb-4">
+                <p class="italic">"The courses are well-structured, and the instructor's explanations are easy to understand." - David R.</p>
             </div>
-            <div class="testimonial-item">
-                <p>"Thanks to Learn Oracle SQL With Surya, I landed my dream job as a database administrator!" - Emily S.</p>
+            <div class="testimonial-item mb-4">
+                <p class="italic">"Thanks to Learn Oracle SQL With Surya, I landed my dream job as a database administrator!" - Emily S.</p>
             </div>
         </div>
+
+        <!-- Adding a footer for additional content -->
+        <footer class="mt-8 text-center text-gray-600">
+            <p>&copy; 2024 Learn Oracle SQL With Surya. All rights reserved.</p>
+            <p>For inquiries, contact: itsmesurya0607@gmail.com</p>
+        </footer>
     </div>
 </body>
 </html>
