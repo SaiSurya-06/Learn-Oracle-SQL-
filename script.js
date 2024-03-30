@@ -9,4 +9,17 @@ function toggleVisibility(index) {
       button.textContent = 'SELECT'; // Change the text back to 'SELECT'
     }
   }
-  
+
+  // JavaScript function to navigate to the specified page
+  function navigate(page) {
+    // Check if the page parameter is 'index.html' for home page
+    if (page === 'index.html') {
+        // Redirect to the home page
+        window.location.href = "index.html";
+    } 
+    // Check if the page parameter is 'queries.html' for notes page
+    else if (page === 'queries.html') {
+        // Redirect to the notes page
+        window.location.href = "queries.html";
+    }
+}

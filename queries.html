@@ -6,25 +6,56 @@
     <title>SQL Queries</title>
     <!-- Include Tailwind CSS -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Apply background image */
+        body {
+            background-image: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiNe_OIscfM-T4mNUpObFo0VGWk2UiBccBGj65peg0PFHLkjnvR0GnA2sw3gCT8wYEVgp6KV7QYXUYyq59_waRZPH7KtS2Pp6guqjCkbqGJEnHtCLynFGvgWdZBKZqHbdn2ZFnhiRLn6IroVAqsJPLgBy1bSPiUgYUUo6SbWHj-nnhTMudQaT987xH8vaE/s860/qBG.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            font-family: sans-serif;
+        }
+    </style>
 </head>
-<body class="font-sans bg-gradient-to-br from-blue-200 to-blue-400">
+<body>
 
-<div class="container mx-auto p-8 max-w-3xl bg-white rounded-lg shadow-lg">
-    <h1 class="text-4xl text-center text-blue-600 mb-8 underline">SQL Queries</h1>
+<div class="container mx-auto p-8 max-w-3xl bg-white bg-opacity-75 rounded-lg shadow-lg">
+    <!-- Main Heading -->
+    <h1 class="text-4xl text-center text-blue-600 mb-8 underline">ORACLE SQL QUERIES</h1>
+
+    <!-- Paragraph on practicing queries -->
+    <p class="text-center text-gray-700 mb-6">Engaging in consistent practice with SQL queries is paramount for any student aiming to master database management and data analysis. Through regular practice sessions, students not only reinforce their understanding of SQL syntax and concepts but also develop a profound familiarity with database manipulation techniques. Practice enables students to encounter a diverse range of real-world scenarios, empowering them to craft efficient and optimized queries to retrieve, manipulate, and analyze data effectively. Moreover, by encountering and resolving various challenges during practice sessions, students cultivate problem-solving skills essential for navigating complex database structures. Ultimately, practicing SQL queries instills confidence and proficiency in students, equipping them with the expertise necessary to tackle intricate database tasks and excel in their academic and professional endeavors.</p>
+
+    <!-- Popular quotes on practicing -->
+    <div class="text-center mb-6">
+        <p class="text-sm text-gray-600 italic">"I fear not the man who has practiced 10,000 queries once, but I fear the man who has practiced one query 10,000 times." - Bruce Lee</p>
+        <p class="text-sm text-gray-600 italic">"Practice does not make perfect. Only perfect practice makes perfect." - Vince Lombardi</p>
+    </div>
+
+    <!-- DQL (DATA QUERY LANGUAGE) heading -->
+    <h2 class="text-lg text-left text-blue-600 mb-4 ml-4 underline md:text-center">DQL (DATA QUERY LANGUAGE)</h2>
+
+    <!-- Basic Queries heading -->
+    <h2 class="text-lg text-left text-blue-600 mb-4 ml-4 md:text-center">Basic Queries on Employee Table & Department Table</h2>
 
     <!-- Query buttons -->
-    <button onclick="toggleAnswer('q1')" class="btn bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded mb-4 w-full">1. Write a query to display employee information from employee table?</button>
-    <div id="q1" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
-        <p>A) SELECT * FROM EMP;</p>
+    <div class="flex flex-col items-center mb-8">
+        <button onclick="toggleAnswer('q1')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">1. Write a query to display employee information from employee table?</button>
+        <div id="q1" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>A) SELECT * FROM EMP;</p>
+        </div>
+
+        <button onclick="toggleAnswer('q2')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">2. Query to display department information from department table?</button>
+        <div id="q2" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>A) SELECT * FROM DEPT;</p>
+        </div> 
     </div>
 
-    <button onclick="toggleAnswer('q2')" class="btn bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded mb-4 w-full">2. Query to display department information from department table?</button>
-    <div id="q2" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
-        <p>A) SELECT * FROM DEPT;</p>
+    <!-- Button for page navigation -->
+    <div class="flex justify-center mt-4">
+        <button onclick="navigate('index.html')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mr-4">Home Page</button>
+        <button onclick="navigate('notes.html')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md">Notes</button>
     </div>
-
-    <!-- Add more buttons and answers as needed -->
-
 </div>
 
 <script>
@@ -37,6 +68,20 @@
         } else {
             answer.style.display = "none";
             answer.classList.add("hidden");
+        }
+    }
+
+    // JavaScript function to navigate to the specified page
+    function navigate(page) {
+        // Check if the page parameter is 'index.html' for home page
+        if (page === 'index.html') {
+            // Redirect to the home page
+            window.location.href = "index.html";
+        } 
+        // Check if the page parameter is 'notes.html' for notes page
+        else if (page === 'notes.html') {
+            // Redirect to the notes page
+            window.location.href = "notes.html";
         }
     }
 </script>

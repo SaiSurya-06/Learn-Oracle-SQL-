@@ -113,4 +113,34 @@ body {
       padding: 10px;
     }
   }
+  /* Base button styles */
+  .btn {
+    display: inline-block;
+    background-color: #3182ce; /* Blue-600 */
+    color: #fff;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 9999px; /* Rounded-full */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    outline: none;
+    margin: 0.5rem; /* Add margin */
+  }
+  
+  /* Hover effect */
+  .btn:hover {
+    background-color: #2c5282; /* Blue-700 */
+    transform: translateY(-2px);
+  }
+  
+  /* Focus effect */
+  .btn:focus {
+    box-shadow: 0 0 0 3px rgba(49, 130, 206, 0.5); /* Blue-500 with opacity */
+  }
+  
+  /* Active effect */
+  .btn:active {
+    transform: translateY(1px);
+  }
   
