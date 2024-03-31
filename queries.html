@@ -7,15 +7,81 @@
     <!-- Include Tailwind CSS -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
-        /* Apply background image */
+        /* Style for the body */
         body {
-            background-image: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiNe_OIscfM-T4mNUpObFo0VGWk2UiBccBGj65peg0PFHLkjnvR0GnA2sw3gCT8wYEVgp6KV7QYXUYyq59_waRZPH7KtS2Pp6guqjCkbqGJEnHtCLynFGvgWdZBKZqHbdn2ZFnhiRLn6IroVAqsJPLgBy1bSPiUgYUUo6SbWHj-nnhTMudQaT987xH8vaE/s860/qBG.jpg');
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj1oKEuwuBbiMh455tgaKxy_ZLPjRBIVaHzj2WaTl1XJ9Z7j2KxzfZNtdfd_1HuDcoFobqy_uKid-EXH51CFKIeh4K3-wk3wyraky7DUnVG0REw1c3E4ZGy3s1SUMDOF0kMCqyX-4dOV8GXKD6N5-AY6JdT6HQqutO9z4rni1nbGay15BqOK5V4Clku_DY/s1344/Default_Generate_a_vibrant_and_professional_databasethemed_bac_3.jpg');
             background-size: cover;
-            background-repeat: no-repeat;
             background-position: center;
-            font-family: sans-serif;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: #333; /* Text color */
+            height: 100vh;
         }
-    </style>
+
+        /* Container style */
+        .container {
+            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Shadow effect */
+            max-width: 800px;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        /* Main Heading style */
+        h1 {
+            color: #007bff; /* Blue color */
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* Subheadings style */
+        h2, h3, h4 {
+            color: #007bff; /* Blue color */
+            margin-top: 20px;
+        }
+
+        /* Paragraph style */
+        p {
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        /* Button style */
+        .btn {
+            background-color: #007bff; /* Blue color */
+            color: #fff; /* White color */
+            border: none;
+            border-radius: 20px;
+            padding: 10px 20px;
+            margin-bottom: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Button hover effect */
+        .btn:hover {
+            background-color: #0056b3; /* Darker shade of blue */
+        }
+
+        /* Answer style */
+        .answer {
+            background-color: #f8f9fa; /* Light gray background */
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        /* Answer hidden by default */
+        .answer {
+            display: none;
+        }
+    </style> 
 </head>
 <body>
 
@@ -28,7 +94,7 @@
 
     <!-- Popular quotes on practicing -->
     <div class="text-center mb-6">
-        <p class="text-sm text-gray-600 italic">"I fear not the man who has practiced 10,000 queries once, but I fear the man who has practiced one query 10,000 times." - Bruce Lee</p>
+        <p class="text-sm text-gray-600 italic">"I fear not the man who has practiced 10,000 queries once, but I fear the man who has practiced one query 10,000 times."</p>
         <p class="text-sm text-gray-600 italic">"Practice does not make perfect. Only perfect practice makes perfect." - Vince Lombardi</p>
     </div>
 
@@ -36,20 +102,195 @@
     <h2 class="text-lg text-left text-blue-600 mb-4 underline ml-4 md:ml-0 md:text-center">DQL (DATA QUERY LANGUAGE)</h2>
 
     <!-- Basic Queries heading -->
-    <h2 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">Basic Queries on Employee Table & Department Table</h2>
+    <h3 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">Basic Queries on Employee Table & Department Table</h3>
 
     <!-- Query buttons -->
     <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
         <button onclick="toggleAnswer('q1')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">1. Write a query to display employee information from employee table?</button>
         <div id="q1" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
-            <p>A) SELECT * FROM EMP;</p>
+            <p>SELECT * FROM EMP;</p>
         </div>
 
         <button onclick="toggleAnswer('q2')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">2. Query to display department information from department table?</button>
         <div id="q2" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
-            <p>A) SELECT * FROM DEPT;</p>
-        </div> 
+            <p>SELECT * FROM DEPT;</p>
+        </div>
+        
+        <button onclick="toggleAnswer('q3')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">3. Query to display tables present in database?</button>
+        <div id="q3" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>SELECT * FROM TAB;</p>
+        </div>
+
+        <button onclick="toggleAnswer('q4')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">4. Query to display employee name and degnisation for all employee from emp table?</button>
+        <div id="q4" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>SELECT ENAME , JOB FROM EMP;</p>
+        </div>
+
+        <button onclick="toggleAnswer('q5')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">5. Query to display Ename , Date of joining , salary , deptNo for all the employee?</button>
+        <div id="q5" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>SELECT ENAME, HAIREDATE, SAL, DEPTNO FROM EMP;</p>
+        </div>
+
+        <button onclick="toggleAnswer('q6')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">6. Query to display EmpNo & EmpName along with their ManagerNO and Commission for the employees?</button>
+        <div id="q6" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>SELECT EMPNO, ENAME, MGR, COMM FROM EMP;</p>
+        </div>
+
+        <button onclick="toggleAnswer('q7')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">7. Query to display DeptName & Location from Dept table?</button>
+        <div id="q7" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>SELECT DNAME, LOC FROM DEPT;</p>
+        </div>
+
+        <button onclick="toggleAnswer('q8')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">8. Write a query to display Dpetno and Dpetname from Dept table?</button>
+        <div id="q8" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>SELECT DEPTNO, DNAME FROM DEPT;</p>
+        </div>
     </div>
+
+    <h3 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">ALIASING</h3>
+    <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q9')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">9. Write a query to Rename column name ?</button>
+        <div id="q9" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>- SELECT ENAME “EMPNAME”, SAL “SALARY” FROM EMP;<br>
+               - SELECT ENAME “EMPNAME”, HIREDATE “DOJ” FROM EMP;</p>
+        </div>
+
+        <button onclick="toggleAnswer('q10')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">10. Write a query to Rename table name ?</button>
+        <div id="q10" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>SELECT * FROM EMP “EMPLOYEE” ;</p>
+        </div>
+    </div>
+
+    <h3 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">CREATING DUPICLATE TABLE</h3>
+    <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q11')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">11. Create a duplicate table using old table?</button>
+        <div id="q11" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>CREATE TABLE HYD<br>
+               AS SELECT * FROM EMP;</p>
+        </div>
+    </div>
+
+    <h3 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">CREATING DUPICLATE TABLE</h3>
+    <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q12')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">12. Write a query where Ename is Smith?</button>
+        <div id="q12" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>SELCECT * FROM EMP WHERE ENAME = 'SMITH';</p>
+        </div>
+
+        <button onclick="toggleAnswer('q13')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">13. Write a query where DeptNo is 30?</button>
+        <div id="q13" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>SELECT * FROM EMP WHERE DEPTNO = 30;</p>
+        </div>
+
+        <button onclick="toggleAnswer('q14')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">14. Display Ename, Job, Salary details of employee from employee table where job is salesman?</button>
+        <div id="q14" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>SELECT ENMAE, JOB, SAL FROM EMP WHERE JOB = 'SALESMAN';</p>
+        </div>
+    </div>
+
+    <h3 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">ORDER BY CLAUSE</h3>
+    <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q15')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">15. Display Ename in ascending order whose salary is 3000?</button>
+        <div id="q15" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>SELECT * FROM EMP<br>
+                WHERE SAL = 3000<br>
+                ORDER BY ENAME ASE;</p>
+        </div>
+
+        <button onclick="toggleAnswer('q16')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">16. Display Ename, Job, Sal for employee in descending order of salary whose job is salesman?</button>
+        <div id="q16" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>SELECT ENAME, JOB, SAL FROM EMP <br>
+                WHERE JOB = 'SALESMAN' <br>
+                ORDER BY SAL DESC;</p>
+        </div>
+    </div>
+
+    <h3 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">DATA TYPES</h3>
+    <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q17')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">17. Create a table of pen?</button>
+        <div id="q17" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>CREATE TABLE PEN (PNAME CHAR(15), PCOLOUR CHAR(15), PCOST NUMBER(36));</p>
+        </div>
+
+        <button onclick="toggleAnswer('q18')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">18. Create a table for college?</button>
+        <div id="q18" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>CREATE TABLE COLLEGE <br>
+                (CNAME CHAR(30), CUNIV CHAR(30), CLOC(30), CFEES NUMBER(20));</p>
+        </div>
+    </div>
+    
+    <h3 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">CONSTRAINT</h3>
+    <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q19')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">19. Write a query using an example of NOT NULL Constraint?</button>
+        <div id="q19" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>CREATE TABLE CLASS <br>
+                (STDNAME CHAR(11) NOT NULL, STDMOB_NO NUMBER(10) UNIQUE);</p>
+        </div>
+
+        <button onclick="toggleAnswer('q20')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">20. Write a query using an example of CHECK Constraint?</button>
+        <div id="q20" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>CREATE TABLE SHADI <br>
+                (CNAME VARCHAR(13) UNIQUE, MOBNO NUMBER(10) UNIQUE, <br>
+                LOC VARCHAR(13) NOT NULL, AGE NUMBER(2) CHECK(AGE > 25));</p>
+        </div>
+
+        <button onclick="toggleAnswer('q21')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">21. Create two tables & build a relation between those tables with the help of common column using primary key and foreign key constraints?</button>
+        <div id="q21" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>CREATE TABLE BANK <br>
+                (BANKNAME CHAR(12) PRIMARY KEY, <br>
+                IFSC VARCHAR(10) UNIQUE, <br>
+                PINCODE NUMBER(6) NOT NULL);<br>
+                CREATE TABLE CUSTOMER <br>
+                (CNAME CARCHAR(10) NOT NULL, <br>
+                BANKNAME CAHR(12) REFERENCE BANK (BANKNAME) <br>
+                ACCTNO NUMBER(11) UNIQUE);</p>
+        </div>
+    </div>
+    <h3 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">DDL (DATA DEFINITION LANGUAGE)</h3>
+    <h4 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">1.	CREATE TABLE</h4>1
+    <h4 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">2.	RENAME TABLE NAME</h4>2
+    <h4 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">3. DROP TABLE</h4>3
+    <h4 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">4. TRUNCATE TABLE</h4>1
+    <h4 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">5.	FLASBACK</h4>1
+    <h4 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">6.	PURGE TABLE</h4>1
+    <h4 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">7.	ALTER STATEMENT</h4>8
+    <h3 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">DML (DATA MANUPLATION LANGUAGE)</h3>
+    <h4 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">1.	INSERT DATA</h4>2
+    <h4 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">2.	UPDATE</h4>3
+    <h4 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">3.	DELETE</h4>2
+    
+    <h3 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">OPERATORS</h3>
+    <h4 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">1.	ARITHMATIC OPERATORS </h4>11
+    <h4 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">2.	RELATIONAL OPERATORS</h4>11
+    <h4 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">3. LOGICAL OPERATOR</h4>12
+    <h4 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">4. SPECIAL OPERATOR</h4>
+    <h4 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">IN OPERATOR</h4>5
+    <h4 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">BETWEEN OPERATOR</h4>3
+    <h4 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">LIKE OPERATOR</h4>15
+    <h4 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">CONCATENCATION OPERATOR</h4>2
+    <h4 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">5. SET OPERATOR</h4>
+    <h4 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">UNION SET OPERATOR</h4>3
+    <h4 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">UNION ALL OPERATOR</h4>1
+    <h4 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">INTERSECT OPERATOR</h4>1
+    <h4 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">MINUS OPERATOR</h4>1
+    <h3 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">FUNCTIONS</h3>
+    <h4 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">1. SINGLE ROW FUNCTIONS (SCALAR)</h4>
+    <h4 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">UPPER() / LOWER() / INITCAP()</h4>3
+    <h4 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">LENGTH()</h4>2
+    <h4 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">SUB-STRING()</h4>7
+    <h4 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">REPLACE()</h4>3
+    <h4 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">INSTR()</h4>5
+    <h4 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">2. MULTI ROW FUNCTIONS (SCALAR)</h4>
+    <h4 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">MAX() / MIN() / COUNT()</h4>4
+    <h4 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">GROUP BY / HAVING CLAUSE</h4>8
+    <h4 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">DATE FUNCTION</h4>9
+    <h4 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">TO_CHAR FUNCTION</h4>3
+    <h3 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">SUB-QUERY</h3>50
+    <h3 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">CO- RELATED SUB-QUERY</h3>8
+    <h3 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">JOINS</h3>26
+    <h3 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">SELS JOIN</h3>11
+        
+    
 
     <!-- Button for page navigation -->
     <div class="flex justify-start mt-4 ml-4 md:ml-0">
