@@ -1437,250 +1437,361 @@
         <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
         <button onclick="toggleAnswer('q171')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">171. QTD employ info for  employee who joined before king display output if their designation contains ‘rk’ in it?</button>
         <div id="q171" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
-            <p>Answer</p>
+            <p>SELECT * FROM EMP WHERE HIREDATE > <br>
+            (SELECT HIREDATE FROM EMP WHERE ENAME = 'KING') <br>
+            AND <br>
+            JOB = REPLACE(JOB, 'RK') != JOB; 
+            </p>
         </div>
         </div>
         
         <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
         <button onclick="toggleAnswer('q172')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">172. QTD employ info for  employee QTD employ info for  employee who joined before king display output if their designation start with alphabet ‘m’?</button>
         <div id="q172" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
-            <p>Answer</p>
+            <p>SELECT * FROM EMP WHERE HIREDATE < <br>
+            (SELECT HIREDATE FROM EMP WHERE ENAME = 'KING') <br>
+            AND SUB(JOB, 1, 1) = 'M';    
+            </p>
         </div>
         </div>
         
         <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
         <button onclick="toggleAnswer('q173')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">173. QTD senior most employ details who joined in year 1981?</button>
         <div id="q173" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
-            <p>Answer</p>
+            <p>SELECT * FROM EMP WHERE HIREDATE = <br>
+            (SELECT MIN(HIREDATE) FROM WHERE TO_CHAR(HIREDATE, 'YYYY') = 1981);
+            </p>
         </div>
         </div>
         
         <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
         <button onclick="toggleAnswer('q174')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">174. QTD senior most employ details who joined before king?</button>
         <div id="q174" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
-            <p>Answer</p>
+            <p>SELECT * FROM EMP WHERE HIREDATE = <br>
+            (SELECT MIN(HIREDATE) FROM EMP WHERE HIREDATE < <br>
+            (SELECT HIREDATE FROM EMP WHERE ENAME = 'KING'));
+            </p>
         </div>
         </div>
         
         <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
         <button onclick="toggleAnswer('q175')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">175. QTD junior employ details who joined in year 1981?</button>
         <div id="q175" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
-            <p>Answer</p>
+            <p>SELECT * FROM EMP WHERE HIREDATE = <br>
+            (SELECT MAX(HIREDATE) FROM EMP WHERE TO_CHAR(HIREDATE, 'YYYY') = 1981);
+            </p>
         </div>
         </div>
         
         <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
         <button onclick="toggleAnswer('q176')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">176. QTD junior employ details who joined before king.?</button>
         <div id="q176" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
-            <p>Answer</p>
+            <p>SELECT * FROM EMP WHERE HIREDATE = <br>
+            (SELECT MAX(HIREDATE) FROM EMP WHERE HIREDATE < <br>
+            (SELECT HIREDATE FROM EMP WHERE ENAME = 'KING'));
+            </p>
         </div>
         </div>
         
         <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
         <button onclick="toggleAnswer('q177')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">177. QTD junior employ details who joined after king?</button>
         <div id="q177" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
-            <p>Answer</p>
+            <p>SELECT * FROM EMP WHERE HIREDATE = <br>
+                (SELECT MAX(HIREDATE) FROM EMP WHERE HIREDATE > <br>
+                (SELECT HIREDATE FROM EMP WHERE ENAME = 'KING'));
+                </p>
         </div>
         </div>
         
         <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
-        <button onclick="toggleAnswer('q178')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">178. QTD senior  employ details  who joined before king if they belong from research & salesman  department ?</button>
+        <button onclick="toggleAnswer('q178')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">178. QTD senior employ details  who joined before king if they belong from research & salesman  department ?</button>
         <div id="q178" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
-            <p>Answer</p>
+            <p>SELECT * FROM EMP WHERE HIREDATE = <br>
+            (SELECT MIN(HIREDATE) FROM EMP WHERE HIREDATE < <br>
+            (SELECT MIN(HIREDATE) FROM EMP WHERE ENAME = 'KING')) <br>
+            AND <br>
+            DEPTNO IN (SELECT DEPTNO FROM DEPT WHERE DNAME IN('RESEARCH', 'SALES'));
+            </p>
         </div>
         </div>
         
         <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
-        <button onclick="toggleAnswer('q179')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">179. QTD senior most  employ details who joined before king display the output if they belong from miller designation in salesman &research department?</button>
+        <button onclick="toggleAnswer('q179')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">179. QTD senior most employ details who joined before king display the output if they belong from miller designation in salesman & research department?</button>
         <div id="q179" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
-            <p>Answer</p>
+            <p>SELECT * FROM EMP WHERE HIREDATE = <br>
+            (SELECT MIN(HIREDATE) FROM EMP WHERE HIREDATE < <br>
+            (SELECT HIREDATE FROM EMP WHERE ENAME = 'KING')) <br>
+            AND <br>
+            SAL > (SELECT SAL FROM EMP WHERE ENAME = 'MARTINE') <br>
+            AND JOB = (SELECT JOB FROM EMP WHERE ENAME = 'MILLER') <br>
+            AND DEPTNO IN (SELECT DEPTNO FROM DEPT WHERE DNAME IN('SALES','RESEARCH'));
+            </p>
         </div>
         </div>
         
         <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
-        <button onclick="toggleAnswer('q180')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">180. QTD employ details who belongs from martin &miller designation?</button>
+        <button onclick="toggleAnswer('q180')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">180. QTD employ details who belongs from martin & miller location?</button>
         <div id="q180" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
-            <p>Answer</p>
+            <p>SELECT * FROM EMP WHERE DEPTNO IN <br>
+            (SELECT DEPTNO FROM DEPT WHERE LOC IN <br>
+            (SELECT LOC FROM DEPT WHERE DEPTNO IN <br>
+            (SELECT DEPTNO FROM EMP WHERE ENAME IN('MARTIN', 'MILLER'))));
+            </p>
         </div>
         </div>
         
         <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
         <button onclick="toggleAnswer('q181')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">181. QTD employ details who having longest employee name along with details?</button>
         <div id="q181" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
-            <p>Answer</p>
+            <p>SELECT * FROM EMP WHERE LENGTH(ENAME) = <br>
+            (SELCECT MAN(LENGHT(ENAME)) FROM EMP);
+            </p>
         </div>
         </div>
         
         <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
         <button onclick="toggleAnswer('q182')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">182. QTD smallest  employ name in employ’s details?</button>
         <div id="q182" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
-            <p>Answer</p>
+            <p>SELECT * FROM WHERE LENGTH(ENAME) <br>
+            (SELECT MIN(LENGHT(ENAME)) FROM EMP);
+            </p>
         </div>
         </div>
         
         <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
         <button onclick="toggleAnswer('q183')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">183. QTD employ details who is working under king?</button>
         <div id="q183" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
-            <p>Answer</p>
+            <p>SELECT * FROM EMP WHERE MGR = <br>
+                (SELECT EMPNO FROM EMP WHERE ENAME = 'KING');
+            </p>
         </div>
         </div>
         
         <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
         <button onclick="toggleAnswer('q184')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">184. QTD jones manager’s details?</button>
         <div id="q184" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
-            <p>Answer</p>
+            <p>SELECT * FROM EMP WHERE EMPNO = <br>
+            (SELECT MGR FROM EMP WHERE ENAME = 'JONES');
+            </p>
         </div>
         </div>
         
         <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
         <button onclick="toggleAnswer('q185')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">185. QTD  1st & last character of employ name for  employee who working under king?</button>
         <div id="q185" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
-            <p>Answer</p>
+            <p>SELECT SUBSTR(ENAME, 1, 1), SUBSTR(ENAME, -1, 1) FROM EMP WHERE MGR = <br>
+            (SELECT EMPNO FROM EMP WHERE NAME = 'KING');
+            </p>
         </div>
         </div>
         
         <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
         <button onclick="toggleAnswer('q186')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">186. QTD employ info for  employee who is working under king& scott?</button>
         <div id="q186" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
-            <p>Answer</p>
+            <p>SELECT * FROM EMP WHERE MGR IN <br>
+            (SELECT EMPNO FROM EMP WHERE ENAME IN('KING', 'SCOTT'));
+            </p>
         </div>
         </div>
         
         <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
         <button onclick="toggleAnswer('q187')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">187. QTD smith manager  manager’s details?</button>
         <div id="q187" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
-            <p>Answer</p>
+            <p>SELECT * FROM EMP WHERE EMPNO = <br>
+            (SELECT MGR FROM EMP WHERE EMPNO = <br>
+            (SELECT MGR FROM EMP WHERE ENAME = 'SMITH'));
+            </p>
         </div>
         </div>
         
         <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
         <button onclick="toggleAnswer('q188')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">188. QTD smith manager manger manager’s details?</button>
         <div id="q188" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
-            <p>Answer</p>
+            <p>SELECT * FROM EMP WHERE EMPNO = <br>
+                (SELECT MGR FROM EMP WHERE EMPNO = <br>
+                (SELECT MGR FROM EMP WHERE EMPNO = <br>
+                (SELECT MGR FROM EMP WHERE ENAME = 'SMITH')));</p>
         </div>
         </div>
         
         <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
-        <button onclick="toggleAnswer('q189')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">189. QTD 2nd highest earning salary  employ details?</button>
+        <button onclick="toggleAnswer('q189')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">189. QTD 1st highest earning salary employ details?</button>
         <div id="q189" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
-            <p>Answer</p>
+            <p>SELECT * FROM EMP WHERE SAL = <br>
+            (SELECT MAX(SAL) FROM EMP);
+            </p>
         </div>
         </div>
         
         <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
         <button onclick="toggleAnswer('q190')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">190. QTD 1st highest earning salary  employ details salesman designation?</button>
         <div id="q190" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
-            <p>Answer</p>
+            <p>SELECT * FROM EMP WHERE SAL = <br>
+            (SELECT MAX(SAL) FROM EMP WHERE JOB = 'SALESMAN');
+            </p>
         </div>
         </div>
         
         <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
         <button onclick="toggleAnswer('q191')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">191. QTD 1st lowest earning salary  employ details ?</button>
         <div id="q191" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
-            <p>Answer</p>
+            <p>SELECT * FROM EMP WHERE SAL = <br>
+                (SELECT MIN(SAL) FROM EMP);
+            </p>
         </div>
         </div>
         
         <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
         <button onclick="toggleAnswer('q192')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">192. QTD 1st lowest earning salary  employ details salesman designation?</button>
         <div id="q192" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
-            <p>Answer</p>
+            <p>SELECT * FROM EMP WHERE SAL = <br>
+            (SELECT MIN(SAL) FROM EMP WHERE JOB = 'SALESMAN');
+            </p>
         </div>
         </div>
         
         <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
         <button onclick="toggleAnswer('q193')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">193. QTD 2nd highest earning salary  employ details in employ table?</button>
         <div id="q193" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
-            <p>Answer</p>
+            <p>SELECT * FROM EMP WHERE SAL = <br>
+            (SELECT MAX(SAL) FROM EMP WHERE SAL < <br>
+            (SELECT MAX(SAL) FROM EMP));
+            </p>
         </div>
         </div>
         
         <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
         <button onclick="toggleAnswer('q194')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">194. QTD 2nd highest earning salary  employ details in salesman designation?</button>
         <div id="q194" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
-            <p>Answer</p>
+            <p>SELECT * FROM EMP WHERE SAL = <br>
+                (SELECT MAX(SAL) FROM EMP WHERE JOB = 'SALESMAN' AND SAL < <br>
+                (SELECT MAX(SAL) FROM EMP WHERE JOB = 'SALESMAN'));
+            </p>
         </div>
         </div>
         
         <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
         <button onclick="toggleAnswer('q195')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">195. QTD 3rd  lowest earning salary  employ details in depart No 30?</button>
         <div id="q195" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
-            <p>Answer</p>
+            <p>SELECT * FROM EMP WHERE SAL = <br>
+            (SELECT MIN(SAL) FROM EMP WHERE DEPTNO = 30 AND SAL > <br>
+            (SELECT MIN(SAL) FROM EMP WHERE DEPTNO = 30 AND SAL > <br>
+            (SELECT MIN(SAL) FROM EMP WHERE DEPTNO = 30 )));
+            </p>
         </div>
         </div>
         
         <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
-        <button onclick="toggleAnswer('q196')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">196. QTD 2nd highest earning salary employ details in year 1981?</button>
+        <button onclick="toggleAnswer('q196')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">196. QTD 4th highest earning salary employ details in year 1981?</button>
         <div id="q196" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
-            <p>Answer</p>
+            <p>SELECT * FROM EMP WHERE SAL = <br>
+            (SELECT MAX(SAL) FROM EMP WHERE TO_CHAR(HIREDATE, 'YYYY') = '1981' AND SAL < <br>
+            (SELECT MAX(SAL) FROM EMP WHERE TO_CHAR(HIREDATE, 'YYYY') = '1981' AND SAL < <br>
+            (SELECT MAX(SAL) FROM EMP WHERE TO_CHAR(HIREDATE, 'YYYY') = '1981' AND SAL < <br>
+            (SELECT MAX(SAL) FROM EMP WHERE TO_CHAR(HIREDATE, 'YYYY') = '1981'))));
+            </p>
         </div>
         </div>
         
         <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
         <button onclick="toggleAnswer('q197')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">197. QTD 2nd highest earning salary employ details if they belongs from smith’s designation?</button>
         <div id="q197" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
-            <p>Answer</p>
+            <p>SELECT * FROM EMP WHERE SAL = <br>
+            (SELECT MAX(SAL) FROM EMP WHERE SAL < <br>
+            (SELECT MAX(SAL) FROM EMP)) <br>
+            AND JOB = <br>
+            (SELECT JOB FROM EMP WHERE ENAME = 'SMITH');
+            </p>
         </div>
         </div>
         
         <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
         <button onclick="toggleAnswer('q198')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">198. QTD 2nd highest earning salary employ details of employee working under king?</button>
         <div id="q198" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
-            <p>Answer</p>
+            <p>SELECT * FROM EMP WHERE SAL = <br>
+            (SELECT MAX(SAL) FROM EMP WHERE SAL< <br>
+            (SELECT MAX(SAL) FROM EMP WHERE MGR = <br>
+            (SELECT EMPNO FROM EMP WHERE ENAME = 'KING')));
+            </p>
         </div>
         </div>
         
         <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
         <button onclick="toggleAnswer('q199')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">199. QTD smith manager manger manager’s details if  he is earning 3rd highest salary?</button>
         <div id="q199" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
-            <p>Answer</p>
+            <p>SELECT * FROM EMP WHERE EMPNO = <br>
+            (SELECT MGR FROM EMP WHERE EMPNO = <br>
+            (SELECT MGR FROM EMP WHERE ENAME = 'SMITH')) <br>
+            AND <br>
+            SAL = <br>
+            (SELCT MAX(SAL) FROM EMP WHERE SAL < <br>
+            (SELECT MAX(SAL) FROM EMP WHERE SAL < <br>
+            (SELECT MAX(SAL) FROM EMP)));
+            </p>
         </div>
         </div>
         
         <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
         <button onclick="toggleAnswer('q200')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">200. QTD depart name &location for employ who is earning 2nd highest earning salary?</button>
         <div id="q200" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
-            <p>Answer</p>
+            <p>SELECT DNAME, LOC FROM DEPT WHERE DEPTNO IN <br>
+            (SELECT DEPTNO FROM EMP WHERE SAL = <br>
+            (SELECT MAX(SAL) FROM EMP WHERE SAL < <br>
+            (SELECT MAX(SAL) FROM EMP)));
+            </p>
         </div>
         </div>
         
         <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
-        <button onclick="toggleAnswer('q201')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">201. QTD employ dept name loc for 2nd highest salary earning employee in manager designation?</button>
+        <button onclick="toggleAnswer('q201')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">201. QTD employ deptname loc for 2nd highest salary earning employee in manager designation?</button>
         <div id="q201" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
-            <p>Answer</p>
+            <p>SELECT DNAME, LOC FROM DEPT WHERE DEPTNO IN <br>
+                (SELECT DEPTNO FROM EMP WHERE SAL = <br>
+                (SELECT MAX(SAL) FROM EMP WHERE JOB = 'MANAGER' AND SAL < <br>
+                (SELECT MAX(SAL) FROM EMP WHERE JOB = 'MANAGER')));
+            </p>
         </div>
         </div>
         
         <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
         <button onclick="toggleAnswer('q202')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">202. QTD manager details if they having minimum 3 employee’s working under them.?</button>
         <div id="q202" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
-            <p>Answer</p>
+            <p>SELECT * FROM EMP WHERE EMPNO IN <br>
+            (SELECT MGR FROM EMP <br>
+            GROUP BY MGR <br>
+            HAVING COUNT (MGR)>= 3);
+            </p>
         </div>
         </div>
         
         <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
         <button onclick="toggleAnswer('q203')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">203. QTD No of employee’s reporting to king.?</button>
         <div id="q203" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
-            <p>Answer</p>
+            <p>SELECT COUNT(*) FROM EMP WHERE MGR = <br>
+            (SELECT EMPNO FROM EMP WHERE ENAME = 'KING');
+            </p>
         </div>
         </div>
         
         <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
         <button onclick="toggleAnswer('q204')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">204. QTD No of employee’s reporting to jones manager.?</button>
         <div id="q204" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
-            <p>Answer</p>
+            <p>SELECT COUNT(*) FROM EMP WHERE MGR = <br>
+                (SELECT EMPNO FROM EMP WHERE ENAME = 'JONES');
+            </p>
         </div>
         </div>
+
         
-        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+    <h3 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">CO- RELATED SUB-QUERY</h3>
+   <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
         <button onclick="toggleAnswer('q205')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">205. Question?</button>
         <div id="q205" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
             <p>Answer</p>
         </div>
         </div>
         
-    <h3 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">CO- RELATED SUB-QUERY</h3>
-    <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
         <button onclick="toggleAnswer('q206')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">206. Question?</button>
         <div id="q206" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
             <p>Answer</p>
@@ -1729,15 +1840,15 @@
         </div>
         </div>
         
-        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+    <h3 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">JOINS</h3>
+    <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
         <button onclick="toggleAnswer('q213')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">213. Question?</button>
         <div id="q213" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
             <p>Answer</p>
         </div>
         </div>
         
-    <h3 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">JOINS</h3>
-    <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
         <button onclick="toggleAnswer('q214')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">214. Question?</button>
         <div id="q214" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
             <p>Answer</p>
@@ -1911,16 +2022,16 @@
             <p>Answer</p>
         </div>
         </div>
-        
-        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+               
+    <h3 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">SELS JOIN</h3>
+    <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
         <button onclick="toggleAnswer('q239')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">239. Question?</button>
         <div id="q239" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
             <p>Answer</p>
         </div>
         </div>
         
-    <h3 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">SELS JOIN</h3>
-    <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
         <button onclick="toggleAnswer('q240')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">240. Question?</button>
         <div id="q240" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
             <p>Answer</p>
@@ -1996,6 +2107,7 @@
             <p>Answer</p>
         </div>
         </div>
+        
         
         
     
