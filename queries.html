@@ -1284,7 +1284,7 @@
         
     <h3 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">SUB-QUERY</h3>
     <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
-        <button onclick="toggleAnswer('q155')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">155. QTD employ info for employee who belongs from martin designation.?</button>
+        <button onclick="toggleAnswer('q155')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">155. QTD(Query To Display) employ info for employee who belongs from martin designation.?</button>
         <div id="q155" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
             <p>SELECT * FROM EMP WHERE JOB = <br>
                 (SELECT JOB FROM EMP WHERE ENAME = 'MARTIN');
@@ -1785,87 +1785,130 @@
         
     <h3 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">CO- RELATED SUB-QUERY</h3>
    <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
-        <button onclick="toggleAnswer('q205')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">205. Question?</button>
+        <button onclick="toggleAnswer('q205')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">205. QTD employee details who is earning first highest salary? </details> </button>
         <div id="q205" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
-            <p>Answer</p>
+            <p>SELECT * FROM EMP WHERE SAL = <br>
+            (SELECT MIN(SAL) FROM <br>
+            (SELECT DISTINCT(SAL) FROM EMP ORDER BY SAL DESC)
+            WHERE ROWNUM <= 1);
+            </p>
         </div>
         </div>
         
         <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
-        <button onclick="toggleAnswer('q206')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">206. Question?</button>
+        <button onclick="toggleAnswer('q206')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">206. QTD employees details who is earning fourth higest salary?</button>
         <div id="q206" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
-            <p>Answer</p>
+            <p>SELECT * FROM EMP WHERE SAL = <br>
+            (SELECT MIN(SAL) FROM <br>
+            (SELECT DISTINCT(SAL) FROM EMP ORDER BY SAL DESC) <br>
+            WHERE ROWNUM <= 4);
+            </p>
         </div>
         </div>
         
         <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
-        <button onclick="toggleAnswer('q207')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">207. Question?</button>
+        <button onclick="toggleAnswer('q207')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">207. QTD starting 4 highest salaries from employees details ?</button>
         <div id="q207" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
-            <p>Answer</p>
+            <p>(SELECT SAL FROM <br>
+            (SELECT DISTINCT(SAL) FROM EMP ORDER BY SAL DESC) <br>
+            WHERE ROWNUM <= 4);
+            </p>
         </div>
         </div>
         
         <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
-        <button onclick="toggleAnswer('q208')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">208. Question?</button>
+        <button onclick="toggleAnswer('q208')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">208. QTD employees details for starting 4 highest salaries earning employ?</button>
         <div id="q208" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
-            <p>Answer</p>
+            <p>SELECT * FROMM EMP WHERE SAL IN <br>
+            (SELECT SAL FROM <br>
+            (SELECT DISTINCT(SAL) FROM EMP ORDER BY SAL DESC) <br>
+            WHERE ROWNUM <= 4);
+            </p>
         </div>
         </div>
         
         <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
-        <button onclick="toggleAnswer('q209')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">209. Question?</button>
+        <button onclick="toggleAnswer('q209')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">209. QTD 3rd lowest salary from employee table ?</button>
         <div id="q209" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
-            <p>Answer</p>
+            <p>(SELECT MAX(SAL) FROM <br>
+            (SELECT DISTINCT(SAL) FROM EMP ORDER BY SAL ASC) <br>
+            WHERE ROWNUM <= 3);
+            </p>
         </div>
         </div>
         
         <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
-        <button onclick="toggleAnswer('q210')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">210. Question?</button>
+        <button onclick="toggleAnswer('q210')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">210. QTD employees details who is earning second lowest salary ?</button>
         <div id="q210" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
-            <p>Answer</p>
+            <p>SELECT * FROM EMP WHERE SAL = <br>
+            (SELECT MAX(SAL) FROM <br>
+            (SELECT DISTINCT(SAL) FROM EMP ORDER BY SAL ASC) <br>
+            WHERE ROWNUM <= 2);
+            </p>
         </div>
         </div>
         
         <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
-        <button onclick="toggleAnswer('q211')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">211. Question?</button>
+        <button onclick="toggleAnswer('q211')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">211. QTD starting three lowest salary earning employee details?</button>
         <div id="q211" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
-            <p>Answer</p>
+            <p>(SELECT SAL FROM <br>
+            (SELECT DISTINCT(SAL) FROM EMP ORDER BY SAL ASC)<br>
+            WHERE ROWNUM <= 3);
+            </p>
         </div>
         </div>
         
         <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
-        <button onclick="toggleAnswer('q212')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">212. Question?</button>
+        <button onclick="toggleAnswer('q212')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">212. QTD 3rd highest salary and 3rd lowest salary earning employee details?</button>
         <div id="q212" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
-            <p>Answer</p>
+            <p>SELECT * FROM EMP WHERE SAL = <br>
+            (SELECT MIN(SAL) FROM <br>
+            (SELECT DISTINCT(SAL) FROM EMP ORDER BY SAL DESC)<br>
+            WHERE ROWNUM <= 3) <br>
+            OR SAL = <br>
+            (SELECT MAX(SAL) FROM <br>
+            (SELECT DISTINCT(SAL) FROM EMP ORDER BY SAL ASC)<br>
+            WHERE ROWNUM <= 3);
+            </p>
         </div>
         </div>
         
     <h3 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">JOINS</h3>
     <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
-        <button onclick="toggleAnswer('q213')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">213. Question?</button>
+        <button onclick="toggleAnswer('q213')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">213. QTD employees information & dept information for all the employee?</button>
         <div id="q213" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
-            <p>Answer</p>
+            <p>SELECT * FROM EMP JOIN DEPT <br>
+            ON EMP.DEPTNO = DEPT.DEPTNO;
+            </p>
         </div>
         </div>
         
         <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
-        <button onclick="toggleAnswer('q214')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">214. Question?</button>
+        <button onclick="toggleAnswer('q214')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">214. QTD employee nome & det name for all the employee?</button>
         <div id="q214" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
-            <p>Answer</p>
+            <p>SELECT ENAME, DNAME FROM EMP JOIN DEPT <br>
+            ON EMP.DEPTNO = DEPT.DEPTNO;
+            </p>
         </div>
         </div>
         
         <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
-        <button onclick="toggleAnswer('q215')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">215. Question?</button>
+        <button onclick="toggleAnswer('q215')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">215. QTD employee information and dept information for all the employees who belongs from Salesman designation?</button>
         <div id="q215" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
-            <p>Answer</p>
+            <p>SELECT * FROM EMP JOIN DEPT <br>
+            ON EMP.DEPTNO = DEPT.DEPTNO <br>
+            AND JOB = 'SALESMAN';
+            </p>
         </div>
         </div>
         
         <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
-        <button onclick="toggleAnswer('q216')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">216. Question?</button>
+        <button onclick="toggleAnswer('q216')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">216. QTD smith and martin employees information and dept information?</button>
         <div id="q216" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
-            <p>Answer</p>
+            <p>SELECT * FROM EMP JOIN DEPT <br>
+            ON EMP.DEPT = DEPT.DEPTNO <br>
+            AND ENAME IN('SMIT', 'MARTIN');
+            </p>
         </div>
         </div>
         
