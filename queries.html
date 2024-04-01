@@ -128,7 +128,7 @@
 
         <button onclick="toggleAnswer('q5')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">5. Query to display Ename , Date of joining , salary , deptNo for all the employee?</button>
         <div id="q5" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
-            <p>SELECT ENAME, HAIREDATE, SAL, DEPTNO FROM EMP;</p>
+            <p>SELECT ENAME, HIREDATE, SAL, DEPTNO FROM EMP;</p>
         </div>
 
         <button onclick="toggleAnswer('q6')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">6. Query to display EmpNo & EmpName along with their ManagerNO and Commission for the employees?</button>
@@ -152,7 +152,8 @@
         <button onclick="toggleAnswer('q9')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">9. Write a query to Rename column name ?</button>
         <div id="q9" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
             <p>- SELECT ENAME “EMPNAME”, SAL “SALARY” FROM EMP;<br>
-               - SELECT ENAME “EMPNAME”, HIREDATE “DOJ” FROM EMP;</p>
+               - SELECT ENAME “EMPNAME”, HIREDATE “DOJ” FROM EMP;
+            </p>
         </div>
 
         <button onclick="toggleAnswer('q10')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">10. Write a query to Rename table name ?</button>
@@ -166,7 +167,8 @@
         <button onclick="toggleAnswer('q11')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">11. Create a duplicate table using old table?</button>
         <div id="q11" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
             <p>CREATE TABLE HYD<br>
-               AS SELECT * FROM EMP;</p>
+               AS SELECT * FROM EMP;
+            </p>
         </div>
     </div>
 
@@ -194,14 +196,16 @@
         <div id="q15" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
             <p>SELECT * FROM EMP<br>
                 WHERE SAL = 3000<br>
-                ORDER BY ENAME ASE;</p>
+                ORDER BY ENAME ASE;
+            </p>
         </div>
 
         <button onclick="toggleAnswer('q16')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">16. Display Ename, Job, Sal for employee in descending order of salary whose job is salesman?</button>
         <div id="q16" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
             <p>SELECT ENAME, JOB, SAL FROM EMP <br>
                 WHERE JOB = 'SALESMAN' <br>
-                ORDER BY SAL DESC;</p>
+                ORDER BY SAL DESC;
+            </p>
         </div>
     </div>
 
@@ -215,7 +219,8 @@
         <button onclick="toggleAnswer('q18')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">18. Create a table for college?</button>
         <div id="q18" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
             <p>CREATE TABLE COLLEGE <br>
-                (CNAME CHAR(30), CUNIV CHAR(30), CLOC(30), CFEES NUMBER(20));</p>
+                (CNAME CHAR(30), CUNIV CHAR(30), CLOC(30), CFEES NUMBER(20));
+            </p>
         </div>
     </div>
     
@@ -224,14 +229,15 @@
         <button onclick="toggleAnswer('q19')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">19. Write a query using an example of NOT NULL Constraint?</button>
         <div id="q19" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
             <p>CREATE TABLE CLASS <br>
-                (STDNAME CHAR(11) NOT NULL, STDMOB_NO NUMBER(10) UNIQUE);</p>
+                (STDNAME CHAR(11) NOT NULL, STDMOB_NO NUMBER(10) UNIQUE);
+            </p>
         </div>
 
         <button onclick="toggleAnswer('q20')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">20. Write a query using an example of CHECK Constraint?</button>
         <div id="q20" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
-            <p>CREATE TABLE SHADI <br>
-                (CNAME VARCHAR(13) UNIQUE, MOBNO NUMBER(10) UNIQUE, <br>
-                LOC VARCHAR(13) NOT NULL, AGE NUMBER(2) CHECK(AGE > 25));</p>
+            <p>
+            CREATE TABLE SHADI (CNAME VARCHAR(13) UNIQUE, MOBNO NUMBER(10) UNIQUE, LOC VARCHAR(13) NOT NULL, AGE NUMBER(2) CHECK(AGE &gt; 25));
+            </p>
         </div>
 
         <button onclick="toggleAnswer('q21')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">21. Create two tables & build a relation between those tables with the help of common column using primary key and foreign key constraints?</button>
@@ -243,52 +249,1754 @@
                 CREATE TABLE CUSTOMER <br>
                 (CNAME CARCHAR(10) NOT NULL, <br>
                 BANKNAME CAHR(12) REFERENCE BANK (BANKNAME) <br>
-                ACCTNO NUMBER(11) UNIQUE);</p>
+                ACCTNO NUMBER(11) UNIQUE);
+            </p>
         </div>
     </div>
     <h3 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">DDL (DATA DEFINITION LANGUAGE)</h3>
-    <h4 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">1.	CREATE TABLE</h4>1
-    <h4 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">2.	RENAME TABLE NAME</h4>2
-    <h4 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">3. DROP TABLE</h4>3
-    <h4 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">4. TRUNCATE TABLE</h4>1
-    <h4 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">5.	FLASBACK</h4>1
-    <h4 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">6.	PURGE TABLE</h4>1
-    <h4 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">7.	ALTER STATEMENT</h4>8
-    <h3 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">DML (DATA MANUPLATION LANGUAGE)</h3>
-    <h4 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">1.	INSERT DATA</h4>2
-    <h4 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">2.	UPDATE</h4>3
-    <h4 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">3.	DELETE</h4>2
+    <h4 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">1.	CREATE TABLE</h4>
+    <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q22')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">22. Create a table for student?</button>
+        <div id="q22" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>CREATE TABLE STD <br>
+                (SNAME CHAR(10) NOT NULL, <br>
+                SID NUMBER(10) PRIMARY KEY <br>
+                SCLASS NUMBER (2) NOT NULL);
+                </p>
+        </div>
+        </div>
+        
+    <h4 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">2.	RENAME TABLE NAME</h4>
+    <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q23')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">23. Rename emp table to employee table?</button>
+        <div id="q23" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>RENAME EMP TO EMPLOYEE;</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q24')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">24. Rename dept table to department table?</button>
+        <div id="q24" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>RENAME DEPT TO DEPARTMENT;</p>
+        </div>
+        </div>
+        
+    <h4 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">3. DROP TABLE</h4>
+    <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q25')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">25. Write a query to drop emp table??</button>
+        <div id="q25" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>DROP TABLE EMP;</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q26')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">26. Write a query to drop AMAZON table?</button>
+        <div id="q26" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>DROP TABLE AMAZON;</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q27')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">27. Write a query to drop BANK table?</button>
+        <div id="q27" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>DROP TABLE BANK;</p>
+        </div>
+        </div>
+                
+    <h4 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">4. TRUNCATE TABLE</h4>
+    <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q28')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">28. Write a query to delete employee table permanently?</button>
+        <div id="q28" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>TRUNCATE TABLE EMPLOYEE;</p>
+        </div>
+        </div>
     
+        <h4 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">5.	FLASBACK</h4>
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+            <button onclick="toggleAnswer('q29')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">29. Write a query to restore deleted table from recyclebin?</button>
+            <div id="q29" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+                <p>FLASHBACK TABLE EMP TO BEFOR DROP;</p>
+            </div>
+            </div>            
+    
+    <h4 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">6.	PURGE TABLE</h4>
+    <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q30')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">30. Write a query to delete deleted table from recyclebin?</button>
+        <div id="q30" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>PURGE TABLE EMPLOYEE;</p>
+        </div>
+        </div>
+        
+    <h4 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">7.	ALTER STATEMENT</h4>
+    <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q31')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">31. Write a query to add single column to an existing table?</button>
+        <div id="q31" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>ALTER TABLE EMP <br>
+                ADD (MOBNO NUMBER(10));
+            </p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q32')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">32. Write a query to add multiple columns to an existing table?</button>
+        <div id="q32" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>ALTER TABLE EMP <br>
+                ADD(MOBNO NUMBER(10), ADDRESS CAHR(20));
+            </p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q33')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">33. Write a query to drop single column?</button>
+        <div id="q33" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>ALTER TABLE EMP <br>
+                DROP COLUMN DEPTNO;
+                </p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q34')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">34. Write a query to drop multiple columns?</button>
+        <div id="q34" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>ALTER TABLE EMP <br>
+                DROP (DEPTNO , MOBNO); <br>
+            </p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q35')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">35. Write a query to modify data types for a column?</button>
+        <div id="q35" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>ALTER TABLE EMPLOYEE <br>
+                MODIFY (EMPNO NUMBER(4), JOB VARCHAR2(15)); <br>
+            </p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q36')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">36. Write a query to modify constraints for a column?</button>
+        <div id="q36" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>ALTER TABLE EMPLOYEE <br>
+                MODIFY (ENAME CHAR(12) NOT NULL); <br>
+            </p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q37')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">37. Write a query to rename column name?</button>
+        <div id="q37" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>ALTER TABLE EMPLOYEE <br>
+                RENAME COLUMN SAL TO SALARY; <br>
+            </p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q38')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">38. Write a query to drop primary key?</button>
+        <div id="q38" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>ALTER TABLE TABLENAME <br>
+                DROP PRIMARY KEY;
+            </p>
+        </div>
+        </div>
+        
+    <h3 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">DML (DATA MANUPLATION LANGUAGE)</h3>
+    <h4 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">1.	INSERT DATA</h4>
+    <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q39')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">39. Insert data into student table?</button>
+        <div id="q39" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Method1. INSERT INTO STUDENT VALUES ('SMITH', 9988, 'HYD'); <br>
+                Method2. INSERT INTO STUDENT VALUES (&SNAME, &MOBNO, &LOC); <br>
+                Method3. INSERT INTO STUDENT (SNAME, MOBNO) <br>
+                VALUES (&LILLY, &9978); <br>
+                Method4. INSERT INTO STUDENT (SNAME, LOC) <br>
+                VALUES (KING, HYD)
+            </p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q40')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">40. Write a query such that it insert values in multiple tables using one syntax?</button>
+        <div id="q40" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>INSERT ALL INTO EMP (ENAME, ENO) VALUES (&ENAME, &ENO) <br>
+                INTO DEPT (DEPTNAME, DEPTNO) VALUES (&DEPTNAME, &DEPTNO) <br>
+                (SELECT * FROM DUAL);
+            </p>
+        </div>
+        </div>
+        
+    <h4 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">2.	UPDATE</h4>
+    <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q41')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">41. Update salary to all the employees in that column</button>
+        <div id="q41" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>UPDATE EMP SET SAL = 5000;</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q42')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">42. Update salary to only one particular record</button>
+        <div id="q42" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>UPDATE EMP SET = 5000 WHERE ENAME = 'SMITH';</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q43')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">43. Update to multiple records </button>
+        <div id="q43" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>UPDATE EMP SET SAL = 75000, JOB = 'TRAINER' <br>
+                WHERE ENAME = 'KING';
+            </p>
+        </div>
+        </div>
+    
+    <h4 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">3.	DELETE</h4>
+    <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q44')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">44. Delete table</button>
+        <div id="q44" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>DELETE EMPLOYEE</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q45')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">45. Delete unwanted data from the table</button>
+        <div id="q45" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>DELETE FROM EMP WHERE DEPTNO = 30;</p>
+        </div>
+        </div>
+        
     <h3 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">OPERATORS</h3>
-    <h4 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">1.	ARITHMATIC OPERATORS </h4>11
-    <h4 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">2.	RELATIONAL OPERATORS</h4>11
-    <h4 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">3. LOGICAL OPERATOR</h4>12
+    <h4 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">1.	ARITHMATIC OPERATORS </h4>
+    <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q46')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">46. Write a query to display empname & designation along with 5000Rs increment to each employee?</button>
+        <div id="q46" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>SELECT ENAME, JOB, SAL+5000 FROM EMP;</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q47')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">47. Query to display empname and their dept along with their joining date and 200rs deducation in each employee salary?</button>
+        <div id="q47" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>SELECT ENAME, DEPTNO, HIREDATE, SAL - 200 FROM EMP;</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q48')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">48. Query to display employee details along with annual salary for all the employee?</button>
+        <div id="q48" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>SELECT EMP.*, SAL*12 FROM EMP;</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q49')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">49. Query to display empname along with their designation and daily salary for all the employee?</button>
+        <div id="q49" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>SELECT ENAME, JOB, (SAL*12)/365 FROM EMP;</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q50')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">50. Query to display employee details along with 50% increment to each employee salary?</button>
+        <div id="q50" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>SELECT EMP.*, SAL + (SAL*0.50) FROM EMP; <br>
+                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (or) <br>
+                SELECT EMP.*, SAL + (SAL*50/100) FROM EMP; <br>
+                </p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q51')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">51. Query to display ename and designation along with annual salary and daily salary for all employees?</button>
+        <div id="q51" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>SELECT ENAME, JOB, SAL*12, (SAL*12)/365 FROM EMP;</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q52')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">52. Query to display employee details along with their annual commission for all employee?</button>
+        <div id="q52" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>SELECT EMP.*, COMM*12 FROM EMP;</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q53')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">53. Query to display ename along with employee number and their manager number along with annual salary and 70% increment to each employee salary?</button>
+        <div id="q53" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>SELECT ENAME, ENO, MGRNO, SAL*12, SAL + (SAL*0.70) FROM EMP;</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q54')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">54. Query to display empname, desiganation along with their commission and salary and annual salary and annual commission for all employees?</button>
+        <div id="q54" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>SELECT ENAME, JOB, COMM, SAL, SAL*12, COM*12 FROM EMP;</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q55')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">55. Query to display ename and their joining date along with their annula salary for all employee and rearrange to empname column in ascending order?</button>
+        <div id="q55" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>SELECT ENAME, HIREDATE, SAL*12 FROM EMP <br>
+                ORDER BYE EMPNAME ASC;
+            </p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q56')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">56. Query to display emp details along with their annual salary and daily salary for all employees, rearrange the salary column in descending order?</button>
+        <div id="q56" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>SELECT EMP.*, SAL*12, (SAL*12)/365 FROM EMP <br>
+                ORDER BY SAL DESC;
+            </p>
+        </div>
+        </div>
+    <h4 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">2.	RELATIONAL OPERATORS</h4>
+    <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q57')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">57. Write a query to display emp details whose salary is more then 3000?</button>
+        <div id="q57" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>SELECT EMP.* FROM EMP <br>
+                WHERE SAL>3000;
+            </p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q58')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">58. Query to display emo derails along with their annual salary for all employees whose annual salary is more then 30,000?</button>
+        <div id="q58" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>SELECT EMP.*, SAL*12 FROM EMP <br>
+                WHERE SAL*12 > 30000;
+            </p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q59')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">59. Query to display smith information from emp table? </button>
+        <div id="q59" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>SELECT * FROM EMP <br>
+                WHERE ENAME = 'SMITH';
+            </p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q60')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">60. Query to display employees details for employee who belongs from analyst designation?</button>
+        <div id="q60" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>SELECT * FROM EMP <br>
+                WHERE JOB = 'ANALYST';
+            </p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q61')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">61. Query to display employee information for employee whose manager number is 7839?</button>
+        <div id="q61" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>SELECT * FROM EMP <br>
+                WHERE MGR = 7839;
+            </p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q62')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">62. Query to display employee derails who is having empno is 7839?</button>
+        <div id="q62" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>SELECT * FROM EMP <br>
+                WHERE EMPNO = 7839;
+            </p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q63')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">63. Query to display ename, joining date for all employee who joined before 1982?</button>
+        <div id="q63" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>SELECT ENAME, HIREDATE FROM EMP <br>
+                WHERE HIREDATE < '01-JAN-82';
+            </p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q64')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">64. Query to display employee details for employee who joined after 1982?</button>
+        <div id="q64" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>SELECT * FROM EMP <br>
+                WHERE HIREDATE >'31-DEC-92';
+            </p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q65')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">65. Query to display employee details for employee who belongs from dept 30?</button>
+        <div id="q65" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>SELECT * FROM EMP <br>
+                WHERE DEPTNO = 30;
+            </p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q66')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">66. Query to display employee details for employee who is earning commission more then 200?</button>
+        <div id="q66" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>SELECT * FROM EMP <br>
+                WHERE COMM > 200;
+            </p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q67')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">67. Query to display employee details for employee who joined on 03-DEC-1981?</button>
+        <div id="q67" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>SELECT * FROM EMP <br>
+                WHERE HIREDATE = '03-DEC-1981';
+            </p>
+        </div>
+        </div>
+        
+    <h4 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">3. LOGICAL OPERATOR</h4>
+    <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q68')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">68. Question?</button>
+        <div id="q68" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q69')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">69. Question?</button>
+        <div id="q69" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q70')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">70. Question?</button>
+        <div id="q70" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q71')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">71. Question?</button>
+        <div id="q71" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q72')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">72. Question?</button>
+        <div id="q72" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q73')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">73. Question?</button>
+        <div id="q73" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q74')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">74. Question?</button>
+        <div id="q74" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q75')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">75. Question?</button>
+        <div id="q75" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q76')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">76. Question?</button>
+        <div id="q76" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q77')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">77. Question?</button>
+        <div id="q77" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q78')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">78. Question?</button>
+        <div id="q78" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q79')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">79. Question?</button>
+        <div id="q79" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
     <h4 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">4. SPECIAL OPERATOR</h4>
-    <h4 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">IN OPERATOR</h4>5
-    <h4 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">BETWEEN OPERATOR</h4>3
-    <h4 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">LIKE OPERATOR</h4>15
-    <h4 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">CONCATENCATION OPERATOR</h4>2
+    <h4 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">IN OPERATOR</h4>
+    <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q80')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">80. Question?</button>
+        <div id="q80" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q81')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">81. Question?</button>
+        <div id="q81" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q82')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">82. Question?</button>
+        <div id="q82" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q83')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">83. Question?</button>
+        <div id="q83" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q84')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">84. Question?</button>
+        <div id="q84" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+    <h4 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">BETWEEN OPERATOR</h4>
+    <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q85')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">85. Question?</button>
+        <div id="q85" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q86')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">86. Question?</button>
+        <div id="q86" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q87')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">87. Question?</button>
+        <div id="q87" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+    <h4 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">LIKE OPERATOR</h4>
+    <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q88')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">88. Question?</button>
+        <div id="q88" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q89')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">89. Question?</button>
+        <div id="q89" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q90')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">90. Question?</button>
+        <div id="q90" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q91')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">91. Question?</button>
+        <div id="q91" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q92')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">92. Question?</button>
+        <div id="q92" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q93')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">93. Question?</button>
+        <div id="q93" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q94')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">94. Question?</button>
+        <div id="q94" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q95')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">95. Question?</button>
+        <div id="q95" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q96')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">96. Question?</button>
+        <div id="q96" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q97')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">97. Question?</button>
+        <div id="q97" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q98')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">98. Question?</button>
+        <div id="q98" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q99')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">99. Question?</button>
+        <div id="q99" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q100')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">100. Question?</button>
+        <div id="q100" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q101')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">101. Question?</button>
+        <div id="q101" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q102')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">102. Question?</button>
+        <div id="q102" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+    <h4 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">CONCATENCATION OPERATOR</h4>
+    <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q103')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">103. Question?</button>
+        <div id="q103" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q104')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">104. Question?</button>
+        <div id="q104" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
     <h4 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">5. SET OPERATOR</h4>
-    <h4 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">UNION SET OPERATOR</h4>3
-    <h4 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">UNION ALL OPERATOR</h4>1
-    <h4 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">INTERSECT OPERATOR</h4>1
-    <h4 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">MINUS OPERATOR</h4>1
+    <h4 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">UNION SET OPERATOR</h4>
+    <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q105')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">105. Question?</button>
+        <div id="q105" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q106')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">106. Question?</button>
+        <div id="q106" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q107')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">107. Question?</button>
+        <div id="q107" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+    <h4 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">UNION ALL OPERATOR</h4>
+    <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q108')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">108. Question?</button>
+        <div id="q108" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+    <h4 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">INTERSECT OPERATOR</h4>
+    <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q109')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">109. Question?</button>
+        <div id="q109" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+    <h4 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">MINUS OPERATOR</h4>
+    <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q110')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">110. Question?</button>
+        <div id="q110" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
     <h3 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">FUNCTIONS</h3>
     <h4 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">1. SINGLE ROW FUNCTIONS (SCALAR)</h4>
-    <h4 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">UPPER() / LOWER() / INITCAP()</h4>3
-    <h4 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">LENGTH()</h4>2
-    <h4 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">SUB-STRING()</h4>7
-    <h4 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">REPLACE()</h4>3
-    <h4 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">INSTR()</h4>5
+    <h4 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">UPPER() / LOWER() / INITCAP()</h4>
+    <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q111')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">111. Question?</button>
+        <div id="q111" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q112')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">112. Question?</button>
+        <div id="q112" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q113')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">113. Question?</button>
+        <div id="q113" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+    <h4 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">LENGTH()</h4>
+    <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q114')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">114. Question?</button>
+        <div id="q114" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q115')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">115. Question?</button>
+        <div id="q115" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+    <h4 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">SUB-STRING()</h4>
+    <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q116')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">116. Question?</button>
+        <div id="q116" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q117')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">117. Question?</button>
+        <div id="q117" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q118')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">118. Question?</button>
+        <div id="q118" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q119')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">119. Question?</button>
+        <div id="q119" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q120')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">120. Question?</button>
+        <div id="q120" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q121')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">121. Question?</button>
+        <div id="q121" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q122')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">122. Question?</button>
+        <div id="q122" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+    <h4 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">REPLACE()</h4>
+    <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q123')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">123. Question?</button>
+        <div id="q123" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q124')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">124. Question?</button>
+        <div id="q124" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q125')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">125. Question?</button>
+        <div id="q125" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+    <h4 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">INSTR()</h4>
+    <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q126')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">126. Question?</button>
+        <div id="q126" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q127')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">127. Question?</button>
+        <div id="q127" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q128')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">128. Question?</button>
+        <div id="q128" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q129')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">129. Question?</button>
+        <div id="q129" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q130')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">130. Question?</button>
+        <div id="q130" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
     <h4 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">2. MULTI ROW FUNCTIONS (SCALAR)</h4>
-    <h4 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">MAX() / MIN() / COUNT()</h4>4
-    <h4 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">GROUP BY / HAVING CLAUSE</h4>8
-    <h4 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">DATE FUNCTION</h4>9
-    <h4 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">TO_CHAR FUNCTION</h4>3
-    <h3 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">SUB-QUERY</h3>50
-    <h3 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">CO- RELATED SUB-QUERY</h3>8
-    <h3 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">JOINS</h3>26
-    <h3 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">SELS JOIN</h3>11
+    <h4 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">MAX() / MIN() / COUNT()</h4>
+    <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q131')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">131. Question?</button>
+        <div id="q131" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q132')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">132. Question?</button>
+        <div id="q132" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q133')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">133. Question?</button>
+        <div id="q133" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q134')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">134. Question?</button>
+        <div id="q134" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+
+        
+    <h4 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">GROUP BY / HAVING CLAUSE</h4>
+    <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q135')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">135. Question?</button>
+        <div id="q135" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q136')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">136. Question?</button>
+        <div id="q136" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q137')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">137. Question?</button>
+        <div id="q137" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q138')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">138. Question?</button>
+        <div id="q138" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q139')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">139. Question?</button>
+        <div id="q139" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q140')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">140. Question?</button>
+        <div id="q140" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q141')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">141. Question?</button>
+        <div id="q141" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q142')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">142. Question?</button>
+        <div id="q142" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+    <h4 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">DATE FUNCTION</h4>
+    <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q143')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">143. Question?</button>
+        <div id="q143" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q144')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">144. Question?</button>
+        <div id="q144" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q145')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">145. Question?</button>
+        <div id="q145" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q146')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">146. Question?</button>
+        <div id="q146" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q147')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">147. Question?</button>
+        <div id="q147" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q148')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">148. Question?</button>
+        <div id="q148" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q149')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">149. Question?</button>
+        <div id="q149" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q150')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">150. Question?</button>
+        <div id="q150" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q151')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">151. Question?</button>
+        <div id="q151" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+    <h4 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">TO_CHAR FUNCTION</h4>
+    <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q152')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">152. Question?</button>
+        <div id="q152" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q153')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">153. Question?</button>
+        <div id="q153" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q154')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">154. Question?</button>
+        <div id="q154" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+    <h3 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">SUB-QUERY</h3>
+    <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q155')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">155. QTD employ info for employee who belongs from martin designation.?</button>
+        <div id="q155" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>SELECT * FROM EMP WHERE JOB = <br>
+                (SELECT JOB FROM EMP WHERE ENAME = 'MARTIN');
+            </p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q156')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">156. QTD Emp info for employee who belong to martin designation apart from martin details.?</button>
+        <div id="q156" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>SELECT * FROM EMP WHERE JOB = <br>
+            (SELECT JOB FROM EMP WHERE ENAME = 'MARTIN') AND ENAME != 'MARTIN';
+            </p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q157')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">157. QTD employ  name & designation &along with department No for employ who belong from smith ,martin , scott designation ?</button>
+        <div id="q157" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>SELECT ENAME, JOB, DEPTNO FROM EMO WHERE JOB IN <br>
+            (SELECT JOB FROM EMO WHERE ENAME IN('SMITH', 'MARTIN', 'SCOTT'));
+            </p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q158')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">158. QTD employ details who's manager number is similar to martin manager number?</button>
+        <div id="q158" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>SELECT * FROM EMP WHERE MGR = <br>
+            (SELECT MGR FROM EMO WHERE ENAME = 'MARTIN');
+            </p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q159')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">159. QTD employ  details for employee who is earning salary more than scott salary?</button>
+        <div id="q159" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>SELECT * FROM EMP WHERE SAL > <br>
+            (SELECT SAL FROM EMP WHERE ENAME = 'SCOTT');
+            </p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q160')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">160. QTD employ  details for employee who is earning salary more than smith & Scott salary?</button>
+        <div id="q160" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>SELECT * FROM EMP WHERE SAL > ANY <br>
+            (SELECT SAL FROM EMP WHERE ENAME IN('SMITH', 'SCOTT'));
+            </p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q161')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">161. QTD employ details who is earning salary more than Scott salary display the output if they belong from miller designation?</button>
+        <div id="q161" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>SELECT * FROM EMP WHERE SAL > <br>
+            (SELECT SAL FROM EMP WHERE ENAME = 'SCOTT') <br>
+            AND <br>
+            JOB = (SELECT JOB FROM EMP WHERE ENAME = 'MILLER');
+            </p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q162')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">162. QTD employ’s details who belong from king’s department No ?</button>
+        <div id="q162" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>SELECT * FROM EMP WHERE DEPTNO = <br>
+            (SELECT DEPTNO FROM EMP WHERE ENAME = 'KING');
+            </p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q163')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">163. QTD employ details who belong from research department?</button>
+        <div id="q163" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>SELECT * FROM EMP WHERE DEPTNO = <br>
+            (SELECT DEPTNO FROM DEPT WHERE DNAME = 'RESEARCH');
+            </p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q164')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">164. QTD department info for employ who belong to manager designation?</button>
+        <div id="q164" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>SELECT * FROM DEPT WHERE DEPTNO IN <br>
+            (SELECT DEPTNO FROM DEPT WHERE JOB = 'MANAGER');
+            </p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q165')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">165. QTD employ info  who is earning salary more than average salary of  employee who belong from manager designation?</button>
+        <div id="q165" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>SELECT * FROM EMP WHERE SAL > <br>
+            (SELECT AVG(SAL) FROM EMP WHERE JOB = 'MANAGER');
+            </p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q166')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">166. QTD employ details for  employee who earning salary more than maximum salary of employ who belong from manager designation display the output if they belongs from scott designation?</button>
+        <div id="q166" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>SELECT * FROM EMP WHERE SAL > <br>
+            (SELECT MAX(SAL) FROM EMP WHERE JOB = 'MANAGER') <br>
+            AND <br>
+            JOB = (SELECT JOB FROM EMP WHERE ENAME = 'SCOTT');
+            </p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q167')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">167. QTD employ details joined before king ?</button>
+        <div id="q167" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>SELCT * FROM EMO WHERE HIREDATE < <br>
+            (SELECT HIREDATE FROM EMP WHERE ENAME = 'KING');
+            </p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q168')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">168. Employ details  who joined before king and who belong from martins designation?</button>
+        <div id="q168" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>SELECT * FROM EMP WHERE HIREDATE < <br>
+            (SELECT HIREDATE FROM EMP WHERE ENAME = 'KING') <br>
+            OR <br>
+            JOB = (SELECT JOB FROM EMP WHERE ENAME = 'MARTIN');
+            </p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q169')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">169. Employ details  who joined before king and who belong to martins designation?</button>
+        <div id="q169" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>SELECT * FROM EMP WHERE HIREDATE < <br>
+                (SELECT HIREDATE FROM EMP WHERE ENAME = 'KING') <br>
+                AND <br>
+                JOB = (SELECT JOB FROM EMP WHERE ENAME = 'MARTIN');</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q170')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">170. QTD employ details who is junior to king?</button>
+        <div id="q170" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>SELECT * FROM EMP WHERE HIREDATE > <br>
+            (SELECT HIREDATE FROM EMP WHERE ENAME = 'KING');
+            </p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q171')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">171. QTD employ info for  employee who joined before king display output if their designation contains ‘rk’ in it?</button>
+        <div id="q171" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q172')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">172. QTD employ info for  employee QTD employ info for  employee who joined before king display output if their designation start with alphabet ‘m’?</button>
+        <div id="q172" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q173')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">173. QTD senior most employ details who joined in year 1981?</button>
+        <div id="q173" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q174')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">174. QTD senior most employ details who joined before king?</button>
+        <div id="q174" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q175')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">175. QTD junior employ details who joined in year 1981?</button>
+        <div id="q175" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q176')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">176. QTD junior employ details who joined before king.?</button>
+        <div id="q176" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q177')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">177. QTD junior employ details who joined after king?</button>
+        <div id="q177" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q178')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">178. QTD senior  employ details  who joined before king if they belong from research & salesman  department ?</button>
+        <div id="q178" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q179')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">179. QTD senior most  employ details who joined before king display the output if they belong from miller designation in salesman &research department?</button>
+        <div id="q179" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q180')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">180. QTD employ details who belongs from martin &miller designation?</button>
+        <div id="q180" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q181')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">181. QTD employ details who having longest employee name along with details?</button>
+        <div id="q181" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q182')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">182. QTD smallest  employ name in employ’s details?</button>
+        <div id="q182" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q183')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">183. QTD employ details who is working under king?</button>
+        <div id="q183" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q184')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">184. QTD jones manager’s details?</button>
+        <div id="q184" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q185')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">185. QTD  1st & last character of employ name for  employee who working under king?</button>
+        <div id="q185" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q186')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">186. QTD employ info for  employee who is working under king& scott?</button>
+        <div id="q186" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q187')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">187. QTD smith manager  manager’s details?</button>
+        <div id="q187" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q188')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">188. QTD smith manager manger manager’s details?</button>
+        <div id="q188" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q189')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">189. QTD 2nd highest earning salary  employ details?</button>
+        <div id="q189" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q190')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">190. QTD 1st highest earning salary  employ details salesman designation?</button>
+        <div id="q190" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q191')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">191. QTD 1st lowest earning salary  employ details ?</button>
+        <div id="q191" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q192')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">192. QTD 1st lowest earning salary  employ details salesman designation?</button>
+        <div id="q192" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q193')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">193. QTD 2nd highest earning salary  employ details in employ table?</button>
+        <div id="q193" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q194')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">194. QTD 2nd highest earning salary  employ details in salesman designation?</button>
+        <div id="q194" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q195')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">195. QTD 3rd  lowest earning salary  employ details in depart No 30?</button>
+        <div id="q195" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q196')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">196. QTD 2nd highest earning salary employ details in year 1981?</button>
+        <div id="q196" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q197')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">197. QTD 2nd highest earning salary employ details if they belongs from smith’s designation?</button>
+        <div id="q197" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q198')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">198. QTD 2nd highest earning salary employ details of employee working under king?</button>
+        <div id="q198" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q199')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">199. QTD smith manager manger manager’s details if  he is earning 3rd highest salary?</button>
+        <div id="q199" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q200')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">200. QTD depart name &location for employ who is earning 2nd highest earning salary?</button>
+        <div id="q200" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q201')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">201. QTD employ dept name loc for 2nd highest salary earning employee in manager designation?</button>
+        <div id="q201" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q202')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">202. QTD manager details if they having minimum 3 employee’s working under them.?</button>
+        <div id="q202" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q203')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">203. QTD No of employee’s reporting to king.?</button>
+        <div id="q203" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q204')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">204. QTD No of employee’s reporting to jones manager.?</button>
+        <div id="q204" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q205')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">205. Question?</button>
+        <div id="q205" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+    <h3 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">CO- RELATED SUB-QUERY</h3>
+    <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q206')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">206. Question?</button>
+        <div id="q206" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q207')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">207. Question?</button>
+        <div id="q207" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q208')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">208. Question?</button>
+        <div id="q208" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q209')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">209. Question?</button>
+        <div id="q209" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q210')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">210. Question?</button>
+        <div id="q210" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q211')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">211. Question?</button>
+        <div id="q211" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q212')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">212. Question?</button>
+        <div id="q212" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q213')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">213. Question?</button>
+        <div id="q213" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+    <h3 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">JOINS</h3>
+    <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q214')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">214. Question?</button>
+        <div id="q214" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q215')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">215. Question?</button>
+        <div id="q215" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q216')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">216. Question?</button>
+        <div id="q216" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q217')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">217. Question?</button>
+        <div id="q217" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q218')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">218. Question?</button>
+        <div id="q218" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q219')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">219. Question?</button>
+        <div id="q219" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q220')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">220. Question?</button>
+        <div id="q220" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q221')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">221. Question?</button>
+        <div id="q221" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q222')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">222. Question?</button>
+        <div id="q222" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q223')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">223. Question?</button>
+        <div id="q223" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q224')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">224. Question?</button>
+        <div id="q224" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q225')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">225. Question?</button>
+        <div id="q225" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q226')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">226. Question?</button>
+        <div id="q226" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q227')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">227. Question?</button>
+        <div id="q227" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q228')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">228. Question?</button>
+        <div id="q228" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q229')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">229. Question?</button>
+        <div id="q229" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q230')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">230. Question?</button>
+        <div id="q230" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q231')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">231. Question?</button>
+        <div id="q231" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q232')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">232. Question?</button>
+        <div id="q232" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q233')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">233. Question?</button>
+        <div id="q233" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q234')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">234. Question?</button>
+        <div id="q234" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q235')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">235. Question?</button>
+        <div id="q235" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q236')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">236. Question?</button>
+        <div id="q236" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q237')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">237. Question?</button>
+        <div id="q237" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q238')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">238. Question?</button>
+        <div id="q238" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q239')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">239. Question?</button>
+        <div id="q239" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+    <h3 class="text-lg text-left text-blue-600 mb-4 ml-4 md:ml-0 md:text-center">SELS JOIN</h3>
+    <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q240')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">240. Question?</button>
+        <div id="q240" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q241')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">241. Question?</button>
+        <div id="q241" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q242')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">242. Question?</button>
+        <div id="q242" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q243')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">243. Question?</button>
+        <div id="q243" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q244')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">244. Question?</button>
+        <div id="q244" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q245')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">245. Question?</button>
+        <div id="q245" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q246')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">246. Question?</button>
+        <div id="q246" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q247')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">247. Question?</button>
+        <div id="q247" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q248')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">248. Question?</button>
+        <div id="q248" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q249')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">249. Question?</button>
+        <div id="q249" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
+        <div class="flex flex-col items-start mb-8 ml-4 md:ml-0">
+        <button onclick="toggleAnswer('q250')" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md mb-4">250. Question?</button>
+        <div id="q250" class="answer hidden bg-gray-200 border border-gray-300 pl-4 py-2 mb-4">
+            <p>Answer</p>
+        </div>
+        </div>
+        
         
     
 
